@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>푸드</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .wrap > div {
+        display: flex;
+      }
+      .wrap .top {
+        height: 24px;
+      }
+      .wrap .menu {
+        justify-content: space-between;
+        height: 13px;
+      }
+      .wrap .menu div {
+        display: flex;
+        height: 100%;
+      }
+      .wrap .menu div ul {
+        display: flex;
+        gap: 50px;
+      }
+      .wrap .menu > div ul li a {
+        font-size: 11px;
+        text-decoration: none;
+        color: #000;
+        text-transform: uppercase;
+      }
+      .wrap .main {
+        align-items: flex-end;
+        height: 744px;
+      }
+      .wrap .main ul {
+        list-style: none;
+        font-size: 15px;
+      }
+      .wrap .main ul li a {
+        text-decoration: none;
+        color: #000;
+        align-items: flex-start;
+      }
+      .wrap .foot {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="top">
+        <p><img src="../images/food_img/top.gif" alt="" /></p>
+      </div>
+      <div class="menu">
+        <p><img src="../images/food_img/food_01.gif" alt="" /></p>
+        <div>
+          <ul>
+            <li>
+              <a href="#"> AUGUST/ 2003/ </a>
+            </li>
+            <li>
+              <a href="#"> SUMMER SPECIAL </a>
+            </li>
+            <li>
+              <a href="#"> E·MAGAZLNE </a>
+            </li>
+          </ul>
+          <p><img src="../images/food_img/food_02.gif" alt="" /></p>
+        </div>
+      </div>
+      <div class="main">
+        <p><img src="../images/food_img/note.gif" alt="" /></p>
+        <p><img src="../images/food_img/image.gif" alt="" /></p>
+        <div>
+          <p><img src="../images/food_img/number.gif" alt="" /></p>
+          <ul>
+            <li><a href="#">01. contents</a></li>
+            <li><a href="#">02. contents</a></li>
+            <li><a href="#">03. contents</a></li>
+            <li><a href="#">04. contents</a></li>
+            <li><a href="#">05. contents</a></li>
+          </ul>
+        </div>
+        <p><img src="../images/food_img/page.gif" alt="" /></p>
+      </div>
+      <div class="foot">
+        <p><img src="../images/food_img/bottom.gif" alt="" /></p>
+      </div>
+    </div>
+  </body>
+</html>

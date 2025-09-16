@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.gnb {
+        display: flex;
+        width: 600px;
+        padding: 20px 0;
+        border: 1px solid;
+        justify-content: space-between;
+      }
+      a {
+        text-decoration: none;
+        color: #502413;
+      }
+      ul.gnb > li {
+        flex: 1;
+        position: relative;
+        text-align: center;
+        line-height: 100px;
+      }
+      ul.gnb > li ul.sub {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #502413;
+        overflow: hidden;
+      }
+      ul.gnb:hover > li ul.sub {
+        height: 300px;
+      }
+      ul.gnb > li ul.sub li {
+        line-height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb">
+      <li><a href="#">MENU</a></li>
+      <li>
+        <a href="#">STORY</a>
+        <ul class="sub">
+          <li><a href="#">브랜드</a></li>
+          <li><a href="#">Why 버거킹</a></li>
+          <li><a href="#">ESG 경영</a></li>
+          <li><a href="#">Smart QSR</a></li>
+          <li><a href="#">수상실적</a></li>
+          <li><a href="#">광고영상</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">NRWS</a>
+        <ul class="sub">
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">공지사항</a></li>
+        </ul>
+      </li>
+      <li><a href="#">STORE</a></li>
+      <li><a href="#">COSTOMER</a></li>
+    </ul>
+  </body>
+</html>

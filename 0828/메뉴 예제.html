@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.local {
+        position: relative;
+        width: 1200px;
+        border: 1px solid;
+        margin: 50px auto;
+      }
+      div.local p {
+        position: absolute;
+        width: 100px;
+        border: 1px solid;
+      }
+      p:nth-child(2) {
+        left: 100px;
+      }
+      p:nth-child(3) {
+        left: 200px;
+      }
+      p:nth-child(4) {
+        left: 300px;
+      }
+      p:last-child {
+        left: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="local">
+      <p>하나1</p>
+      <p>하나2</p>
+      <p>하나3</p>
+      <p>하나4</p>
+      <p>하나5</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제주 삼다수</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 1324px;
+        height: 990px;
+        margin: 450px auto;
+        box-sizing: border-box;
+        background: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+        background-repeat: repeat;
+      }
+      p:nth-child(2) {
+        position: fixed;
+        float: center;
+        left: calc((1324px / 2));
+        top: 350px;
+        margin: 0 0 20px;
+      }
+      p:nth-child(2) img {
+        width: 232px;
+        left: calc((100% / 2) - (232px / 2));
+      }
+      p:nth-child(3) {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        <img
+          src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
+          alt="BETTER"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
+          alt="samdasoo"
+        />
+      </p>
+      <p>
+        <img
+          src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+          alt="CHOICE"
+        />
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap .topwarp {
+        background: url(../images/CGV/image/cgv_bg_top.gif);
+      }
+      .wrap .topwarp .top {
+        width: 1025px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .wrap .topwarp .top ul {
+        display: flex;
+        gap: 40px;
+        padding: 20px 0;
+      }
+      .wrap .topwarp .top ul a {
+        color: #fff;
+      }
+      .wrap .menu {
+        width: 1025px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+      .wrap .menu ul {
+        display: flex;
+        gap: 40px;
+      }
+      .wrap .menu ul a {
+        color: red;
+        font-size: 18px;
+      }
+      .wrap .visual {
+        width: 1025px;
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .wrap .cgv {
+        width: 1025px;
+        margin: 0 auto;
+      }
+      .wrap .cgv ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 0;
+      }
+      .wrap .banner{
+        width: 1025px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+      }
+      .wrap .banner> div{
+        flex: 1;
+      }
+      .wrap .banner> div:first-child{
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap .banner .notice{
+        display: flex;
+        justify-content: space-between;
+      }
+      .wrap .banner .notice ul li{
+        line-height: 30px;
+        font-size: 11px;
+      }
+      .wrap .foot{
+        background: #ccc;
+      }
+      .wrap .foot{
+        width: 1025px;
+        margin: 0 auto;
+        padding: 50px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topwarp">
+        <div class="top">
+          <ul>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">English</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- topwrap end -->
+      <div class="menu">
+        <div>
+          <p><img src="../images/CGV/image/cgv_logo.gif" alt="" /></p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">영화예매</a></li>
+            <li><a href="#">신작개봉</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">CGV매점</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- menu 끝 -->
+      <div class="visual">
+        <p><img src="../images/CGV/image/cgv_visual.jpg" alt="" /></p>
+      </div>
+      <!-- visual 끝 -->
+      <div class="cgv">
+        <ul>
+          <li>
+            <a href="#"
+              ><img src="../images/CGV/image/cgv_img03 (1).png" alt="01"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../images/CGV/image/cgv_img03 (2).png" alt="02"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../images/CGV/image/cgv_img03 (3).png" alt="03"
+            /></a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="../images/CGV/image/cgv_img03 (4).png" alt="04"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <!-- cgv 끝 -->
+      <div class="banner">
+        <div>
+          <h3>이벤트</h3>
+          <p><img src="../images/CGV/image/cgv_banner.jpg" alt="" /></p>
+        </div>
+        <div>
+          <h3>공지사항</h3>
+          <div class="notice">
+            <ul>
+              <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+              <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+              <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+              <li><a href="#">공지사항 제목이 들어갑니다.</a></li>
+              <li><a href="#">공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.</a></li>
+            </ul>
+            <ul>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+              <li>2017-08-07</li>
+            </ul>
+         </div>
+        </div>
+      </div>
+    <!-- banner 끝 -->
+    <div class="foot">
+      <p>All Copyrights Reserved.</p>
+    </div>
+    <!-- foot end -->
+  </body>
+</html>
