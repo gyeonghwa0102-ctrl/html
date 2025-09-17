@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap {
+        width: 1900px;
+        height: 100%;
+        background-color: black;
+      }
+      .topwrap {
+        width: 1504px;
+        height: 50px;
+        margin: 0 auto;
+        padding-top: 30px;
+        background-color: black;
+        font-family: "Open Sans";
+      }
+      .topwrap .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      .topwrap .top .menu {
+        display: flex;
+        gap: 20px;
+      }
+      .topwrap .top .menu li a {
+        font-size: 14px;
+        color: #fff;
+      }
+      .topwrap .top .menu2 {
+        display: flex;
+        gap: 20px;
+      }
+      .topwrap .top .menu2 li a {
+        font-size: 10px;
+        color: #fff;
+      }
+      .topwrap .top .menu2 li a::after {
+        content: "|";
+        padding-left: 10px;
+      }
+      .main li:first-child {
+        width: 1504px;
+        height: 55px;
+        margin: 0 auto;
+        background-color: black;
+      }
+      .main li:nth-child(2) {
+        width: 1504px;
+        height: 940px;
+        margin: 0 auto;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .footlist {
+        width: 1504px;
+        height: 300px;
+        margin: 0 auto;
+        background-color: black;
+      }
+      .footlist .foot {
+        padding: 100px 0 0 0;
+      }
+      .footlist .foot p {
+        font-family: "Open Sans";
+        font-size: 14px;
+        color: #fff;
+      }
+      .footlist .copy {
+        font-family: "Open Sans";
+        font-size: 14px;
+        color: #fff;
+        padding: 50px 0px;
+      }
+      .footsns {
+        width: 1504px;
+        height: 300px;
+        margin: 0 auto;
+        background-color: black;
+      }
+      .footsns .footsns2 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .footsns .footsns2 .list {
+        display: flex;
+        justify-content: space-between;
+        font-family: "Open Sans";
+        font-size: 7px;
+      }
+      .footsns .footsns2 .list a {
+        color: #fff;
+        padding: 7px 10px;
+      }
+      .footsns .footsns2 .list a::after {
+        content: "|";
+        padding-left: 10px;
+      }
+      .footsns .footsns2 .app {
+        justify-content: flex-end;
+      }
+      .sns {
+        display: flex;
+      }
+      .sns li a {
+        display: block;
+        width: 35px;
+        height: 30px;
+        background-image: url(https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png);
+      }
+      .sns li:first-child a {
+        background-position: -70px 0;
+      }
+      .sns li:last-child a {
+        background-position: -105px 0;
+      }
+      .app {
+        display: flex;
+      }
+      .app li a {
+        display: block;
+        width: 132px;
+        height: 35px;
+        background-image: url(https://www.madforgarlic.com/resources/pc/images/common/btn_app_B.png);
+      }
+      .app li:first-child a {
+        background-position: 0 -35px;
+      }
+      .app li:last-child a {
+        background-position: -132px -35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topwrap">
+        <div class="top">
+          <p>
+            <img
+              src="https://www.madforgarlic.com/resources/pc/images/common/logoB_B2.png"
+              alt="logo"
+            />
+          </p>
+          <ul class="menu">
+            <li><a href="#">BRAND</a></li>
+            <li>
+              <a href="#">MENU</a>
+            </li>
+            <li>
+              <a href="#">STORE</a>
+            </li>
+            <li>
+              <a href="#">MEMBERSHIP</a>
+            </li>
+            <li>
+              <a href="#">EVENT</a>
+            </li>
+          </ul>
+          <ul class="menu2">
+            <li><a href="#">LOG IN</a></li>
+            <li><a href="#">JOIN</a></li>
+            <li><a href="#">CUSTOMER</a></li>
+            <li><a href="#">RECRUIT</a></li>
+          </ul>
+          <p></p>
+        </div>
+      </div>
+      <ul class="main">
+        <li></li>
+        <li>
+          <img
+            src="https://cdnt.madforgarlic.com/madforgarlic/202503/20250304_ACB_1741050726866.jpg"
+            alt="1"
+          />
+        </li>
+      </ul>
+      <div class="footlist">
+        <div class="foot">
+          <p>
+            (주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F /
+            우편번호: 06098
+          </p>
+          <p>대표문의: 02-2286-8800</p>
+          <p>사업자번호: 261-81-16391 ㅣ 대표자: 윤다예</p>
+        </div>
+        <p class="copy">COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="footsns">
+        <ul class="sns">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <div class="footsns2">
+          <ul class="list">
+            <li><a href="#">PRIVACY POLICY</a></li>
+            <li><a href="#">TERMS OF SERVICE</a></li>
+            <li><a href="#">customer</a></li>
+            <li><a href="#">recruit</a></li>
+          </ul>
+          <ul class="app">
+            <li><a class="#"></a></li>
+            <li><a class="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      .wrap {
+        width: 1910px;
+        height: 90px;
+        background-color: #023586;
+      }
+      .topwrap {
+        width: 1420px;
+        height: 90px;
+        margin: 0 auto;
+        padding: 0 25px;
+        background-color: #023586;
+      }
+      .topwrap .top {
+        display: flex;
+        justify-content: space-around;
+        font-family: "Noto Sans KR";
+        font-size: 14px;
+        padding: 30px;
+      }
+      .topwrap .top .left {
+        display: flex;
+        gap: 20px;
+      }
+      .topwrap .top .left a {
+        color: #fff;
+      }
+      .topwrap .top .right {
+        display: flex;
+        gap: 20px;
+      }
+      .topwrap .top .right a {
+        color: #fff;
+      }
+      .img {
+        display: flex;
+        padding-bottom: 80px;
+      }
+      .img li {
+        flex: 1;
+      }
+      .img li img {
+        width: 100%;
+        height: 790px;
+        overflow: hidden;
+        object-fit: cover;
+      }
+      .banner {
+        width: 1096px;
+        height: 211px;
+        margin: 0 auto;
+      }
+      .tit {
+        width: 1420px;
+        margin: 0 auto;
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .tit li:first-child {
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+      }
+      .tit li:nth-child(2) a {
+        font-family: "Noto Sans KR";
+        font-size: 14px;
+        text-decoration-line: underline;
+        color: #000;
+      }
+      .promotion {
+        width: 1420px;
+        padding: 40px 0;
+        margin: 0 auto;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        font-family: "Noto Sans KR";
+      }
+      .promotion ul {
+        width: 337px;
+        height: 436px;
+      }
+      .promotion ul li:nth-child(2) {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .promotion ul li:nth-child(3) a {
+        font-size: 12px;
+      }
+      .promotion ul li a img {
+        width: 337px;
+        height: 337px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="topwrap">
+        <div class="top">
+          <ul class="left">
+            <li><a href="#">창업안내</a></li>
+            <li><a href="#">파바 매거진</a></li>
+            <li><a href="#">파바 스토리</a></li>
+            <li><a href="#">상품 안내</a></li>
+          </ul>
+          <div class="center">
+            <a href="#"
+              ><img
+                src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/02/Paris_Baguette_logo_BG.gif"
+                alt="logo"
+            /></a>
+          </div>
+          <ul class="right">
+            <li><a href="#">회사 소개</a></li>
+            <li><a href="#">매장 정보</a></li>
+            <li><a href="#">온라인 주문</a></li>
+            <li><a href="#">프로모션</a></li>
+            <a href="#"
+              ><img
+                src="../0917/search_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+            /></a>
+          </ul>
+        </div>
+      </div>
+      <ul class="img">
+        <li>
+          <a href="#">
+            <img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000-3.jpg"
+              alt="1"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5.jpg"
+              alt="2"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_4.jpg"
+              alt="3"
+            />
+          </a>
+        </li>
+      </ul>
+      <p class="banner">
+        <a href="#">
+          <img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/08/franchise_PC_1096x211.jpg"
+            alt=""
+          />
+        </a>
+      </p>
+      <ul class="tit">
+        <li>promotion</li>
+        <li><a href="#">show more</a></li>
+      </ul>
+      <div class="promotion">
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+                alt="1"
+            /></a>
+          </li>
+          <li>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</li>
+          <li><a href="#">read more</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/250903_%EC%9C%84%EC%8B%9C%EC%BA%A3%EC%95%84%EC%9D%B4%EB%83%A5_%ED%94%BC%ED%81%AC%EB%8B%89%EB%A7%A4%ED%8A%B8_%EC%8D%B8%EB%84%A4%EC%9D%BC_1000x1000-2-600x600.jpg"
+                alt="2"
+            /></a>
+          </li>
+          <li>💙파바 X 위시캣💗 아이냥 피크닉매트백 사/전/예/약 ☺️</li>
+          <li><a href="#">read more</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%EC%BC%80%EB%8D%B0%ED%97%8C_%EB%A9%94%EC%9D%B8%EB%B0%B0%EB%84%88_1000_1000-600x600.jpg"
+                alt="3"
+            /></a>
+          </li>
+          <li>🐯K-콘텐츠와 K-베이커리의 맛있는 콜라보✨파바에서 만날래?🚪</li>
+          <li><a href="#">read more</a></li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%ED%95%AB%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%983%EC%A2%85-%EC%8D%B8%EB%84%AC-600x600.png"
+                alt="4"
+            /></a>
+          </li>
+          <li>💙파란라벨🩵 따듯하게 즐기는 핫 샌드위치🥪</li>
+          <li><a href="#">read more</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
