@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap nav {
+        width: 1190px;
+        height: 23px;
+        margin: 0 auto;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .wrap nav ul {
+        display: flex;
+      }
+      .wrap nav .menu {
+        gap: 20px;
+        padding: 50px 0 0 0;
+      }
+      .wrap nav .menu li a {
+        font-family: "Noto Sans KR";
+        font-weight: bold;
+        color: #444444;
+        font-size: 15px;
+        padding: 0 20px;
+        text-transform: uppercase;
+      }
+      .wrap nav .right li a,
+      .wrap nav .right p a {
+        font-family: "Noto Sans KR";
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .wrap nav .right ul {
+        padding: 35px 0 0 80px;
+      }
+      .wrap nav .right li a {
+        font-size: 12px;
+        color: #444444;
+        padding: 0 5px 6px;
+      }
+      .wrap nav .right li:nth-child(2) a {
+        color: #707070;
+      }
+      .wrap nav .right p a {
+        font-size: 14px;
+        color: #fff;
+        padding: 40px;
+        margin: 55px 0 0;
+      }
+      .wrap nav > .right p {
+        background: #00a5b1;
+        width: 133px;
+        padding: 5px 10px;
+        border-radius: 100px;
+      }
+      .wrap .main img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <p class="logo">
+          <a href="#"
+            ><img
+              src="http://caffebene.co.kr/images/common/logo.png"
+              alt="logo"
+          /></a>
+        </p>
+        <ul class="menu">
+          <li><a href="#">Caffebene</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Store</a></li>
+          <li><a href="#">Membership</a></li>
+          <li><a href="#">Global</a></li>
+          <li><a href="#">Contents</a></li>
+        </ul>
+        <div class="right">
+          <ul>
+            <li><a href="#">kr</a></li>
+            <li><a href="#">en</a></li>
+          </ul>
+          <p><a href="#">가맹문의</a></p>
+        </div>
+      </nav>
+      <p class="main">
+        <img
+          src="http://caffebene.co.kr/uploads/banner/20241128813084.jpg"
+          alt="01"
+        />
+      </p>
+    </div>
+  </body>
+</html>
