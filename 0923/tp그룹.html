@@ -16,20 +16,29 @@
         margin: 0;
         padding: 0;
       }
+      input {
+        display: none;
+      }
       .btn {
         display: flex;
         justify-content: center;
-        gap: 20px;
-        padding-top: 130px;
-        padding-bottom: 20px;
         cursor: pointer;
         font-family: "Pretendard";
         font-size: 22px;
-        color: #9999;
+        color: #999;
+      }
+      .btn label::after {
+        content: "|";
+        padding: 0 40px;
+        display: inline-block;
+        color: #999;
+      }
+      .btn label:last-child:after {
+        content: "";
       }
       .photo {
         position: relative;
-        width: 1905px;
+        width: 100%;
         margin: 40px 0 0;
       }
       .photo p img {
@@ -53,8 +62,10 @@
       #menu5:checked ~ .btn label:nth-child(5),
       #menu6:checked ~ .btn label:nth-child(6) {
         color: #111;
-        background-color: #5cb3e6;
-        height: 3px;
+        font-weight: 600;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: #5cb3e6;
       }
     </style>
   </head>
