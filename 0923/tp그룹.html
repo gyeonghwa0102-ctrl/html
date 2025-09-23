@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Pretendard";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 130px;
+        padding-bottom: 20px;
+        cursor: pointer;
+        font-family: "Pretendard";
+        font-size: 22px;
+        color: #9999;
+      }
+      .photo {
+        position: relative;
+        width: 1905px;
+        margin: 40px 0 0;
+      }
+      .photo p img {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0;
+      }
+      #menu1:checked ~ .photo p:first-child img,
+      #menu2:checked ~ .photo p:nth-child(2) img,
+      #menu3:checked ~ .photo p:nth-child(3) img,
+      #menu4:checked ~ .photo p:nth-child(4) img,
+      #menu5:checked ~ .photo p:nth-child(5) img,
+      #menu6:checked ~ .photo p:nth-child(6) img {
+        opacity: 1;
+      }
+      #menu1:checked ~ .btn label:first-child,
+      #menu2:checked ~ .btn label:nth-child(2),
+      #menu3:checked ~ .btn label:nth-child(3),
+      #menu4:checked ~ .btn label:nth-child(4),
+      #menu5:checked ~ .btn label:nth-child(5),
+      #menu6:checked ~ .btn label:nth-child(6) {
+        color: #111;
+        background-color: #5cb3e6;
+        height: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="menu" id="menu1" />
+    <input type="radio" name="menu" id="menu2" />
+    <input type="radio" name="menu" id="menu3" />
+    <input type="radio" name="menu" id="menu4" />
+    <input type="radio" name="menu" id="menu5" />
+    <input type="radio" name="menu" id="menu6" />
+    <div class="btn">
+      <label for="menu1">CEO 인사말</label>
+      <label for="menu2">연혁</label>
+      <label for="menu3">미션·비전</label>
+      <label for="menu4">CI</label>
+      <label for="menu5">계열사</label>
+      <label for="menu6">글로벌 사업장</label>
+    </div>
+    <div class="photo">
+      <p>
+        <img
+          src="https://tp-inc.com/images/sub/sub_visual01_1.jpg"
+          alt="menu1"
+        />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual02.jpg" alt="menu2" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual03.jpg" alt="menu3" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual04.jpg" alt="menu4" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual05.jpg" alt="menu5" />
+      </p>
+      <p>
+        <img src="https://tp-inc.com/images/sub/sub_visual06.jpg" alt="menu6" />
+      </p>
+    </div>
+  </body>
+</html>
