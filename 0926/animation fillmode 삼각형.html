@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .ani {
+        text-align: center;
+      }
+      .ani p {
+        margin: 50px auto;
+        width: 0;
+        height: 0;
+        border: 10px solid #000;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        border-right: none;
+        animation: move 0.5s linear infinite;
+      }
+      .ani .btn label {
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 100px;
+        padding: 5px;
+      }
+      .ani .btn label:hover {
+        background-color: #ccc;
+      }
+      #start:checked ~ .btn label:first-child,
+      #stop:checked ~ .btn label:first-child {
+        background-color: #000;
+        color: #fff;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(10px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ani">
+      <input type="radio" name="btn" id="start" checked />
+      <input type="radio" name="btn" id="stop" />
+      <p></p>
+      <div class="btn">
+        <label for="start">start</label>
+        <label for="stop">stop</label>
+      </div>
+    </div>
+  </body>
+</html>

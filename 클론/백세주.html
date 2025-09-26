@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fefef2;
+      }
+      .top ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+      }
+      .top ul li {
+        margin: 0 40px;
+      }
+      .top p img {
+        display: block;
+        width: 242px;
+        margin: 0 auto;
+      }
+      .img {
+        text-align: center;
+        position: relative;
+      }
+      .img p:first-child img {
+        background: url(https://www.bekseju.com/images/mainbg.jpg);
+      }
+      .img p:nth-child(2) img {
+        position: absolute;
+        width: 167px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <ul>
+        <li>Korean Traditional Wine</li>
+        <li>BEKSEJU</li>
+      </ul>
+      <p><img src="https://www.bekseju.com/images/logo.svg" alt="logo" /></p>
+    </div>
+    <div class="img">
+      <p><img src="https://www.bekseju.com/images/img-bottle.png" alt="" /></p>
+    </div>
+  </body>
+</html>

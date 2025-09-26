@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .platform {
+        width: 1420px;
+        margin: 0 auto;
+        display: flex;
+      }
+      .platform > div:first-child {
+        width: 580px;
+        padding: 100px;
+        top: 0;
+        height: 100%;
+      }
+      .platform > div:nth-child(2) {
+        flex: 1;
+      }
+      .platform > div:nth-child(2) .item {
+        display: flex;
+        gap: 100px;
+        padding-top: 100px;
+      }
+      .platform > div:nth-child(2) .item img {
+        width: 100%;
+      }
+      .platform > div:nth-child(2) .item img > span {
+        color: #82dc28;
+      }
+      footer {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="platform">
+      <div>
+        <h3>OLIVE YOUNG <br />Platforms</h3>
+        <ul>
+          <li><a href="#shop">올리브영 매장</a></li>
+          <li><a href="#online">올리브영 Online (국내)</a></li>
+          <li><a href="#global">올리브영 글로벌</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="item" id="shop">
+          <span>01</span>
+          <div class="info">
+            <p class="thumb">
+              <img
+                src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=EC4D753528ABA154B3C980F06C2894FF"
+                alt=""
+              />
+            </p>
+            <strong>
+              고객과 가장 가까운 곳에서 <br />
+              건강한 아름다움을 제안합니다.
+            </strong>
+            <p class="desc">
+              우리는 1,370여개의 매장을 기반으로 고객에게 <br />뷰티&헬스 상품을
+              큐레이션합니다. <br />또한 체험형 콘텐츠와 커머스의 연계를 통해
+              <br />매력적인 브랜딩, 마케팅 채널로 <br />진화하고 있습니다.
+            </p>
+            <a href="#"
+              ><span class="text">올리브영 매장이 보고 싶다면?</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>
