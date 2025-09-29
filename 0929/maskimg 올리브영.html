@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>올리브영</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+      }
+      div p {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      img {
+        width: 100%;
+      }
+      div p:nth-child(2) img {
+        transform: scale(1);
+        transition: 3s;
+      }
+      div:hover p:nth-child(2) img {
+        transform: scale(10);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="./key_msg_back" alt="" /></p>
+      <p><img src="./key_msg_front_.svg" alt="" /></p>
+    </div>
+  </body>
+</html>

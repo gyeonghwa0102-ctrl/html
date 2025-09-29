@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul.list {
+        display: flex;
+        justify-content: center;
+      }
+      ul li p {
+        width: 120px;
+        height: 120px;
+      }
+      ul li:first-child {
+        background-image: url(./다운로드.png);
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      ul li:first-child:hover p {
+        background-image: url(./icon_main_data_play.png);
+        background-size: 10920px 120px;
+        animation: adplay 3s steps(91) infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list">
+      <li>
+        <p></p>
+      </li>
+    </ul>
+  </body>
+</html>

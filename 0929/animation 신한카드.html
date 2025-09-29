@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      ul {
+        list-style: none;
+      }
+      .wrap{
+        display: flex;
+        gap: 20px;
+      }
+      .tit {
+        width: 282px;
+        height: 359px;
+        border: 1px solid;
+        border-radius: 30px;
+        
+      }
+      .tit .txt .one {
+        display: flex;
+        gap: 100px;
+        font-size: 20px;
+        
+      }
+      .tit .txt {
+        font-size: 24px;
+        padding: 30px 0 10px 10px;
+      }
+      .tit > li:nth-child(2) p {
+        width: 120px;
+        height: 120px;
+        padding: 30px 0 10px 10px; 
+      }
+      .tit > li:nth-child(2) {
+        background-image: url(./다운로드.png);
+        background-repeat: no-repeat;
+      }
+      @keyframes adplay {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: -10920px 0;
+        }
+      }
+      .tit > li:nth-child(2):hover p {
+        background-image: url(./icon_main_data_play.png);
+        background-size: 10920px 0;
+        animation: adplay 3s steps(91) infinite;
+      }
+      .tit li:nth-child(3) {
+        width: 216px;
+        height: 20px;
+        background-color: #f1f4fb;
+        border-radius: 70px;
+        padding: 8px 0;
+        text-align: center;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="tit">
+        <li>
+          <ul class="txt">
+            <li>
+              <ul class="one">
+                <li>다양한</li>
+                <li>></li>
+              </ul>
+            </li>
+            <li>Data 서비스</li>
+          </ul>
+        </li>
+        <li><p></p></li>
+        <li>Data One-Step Service</li>
+      </ul>
+      <ul class="tit">
+        <li>
+          <ul class="txt">
+            <li>
+              <ul class="one">
+                <li>혁신적인</li>
+                <li>></li>
+              </ul>
+            </li>
+            <li>솔루션서비스</li>
+          </ul>
+        </li>
+        <li><p></p></li>
+        <li>상권분석, 시장 모니터링</li>
+      </ul>    
+      <ul class="tit">
+        <li>
+          <ul class="txt">
+            <li>
+              <ul class="one">
+                <li>스마트한</li>
+                <li>></li>
+              </ul>
+            </li>
+            <li>광고서비스 </li>
+          </ul>
+        </li>
+        <li><p></p></li>
+        <li>최적의 고객 타겟팅</li>
+      </ul>
+      <ul class="tit">
+        <li>
+          <ul class="txt">
+            <li>
+              <ul class="one">
+                <li>탁월한</li>
+                <li>></li>
+              </ul>
+            </li>
+            <li>API서비스 </li>
+          </ul>
+        </li>
+        <li><p></p></li>
+        <li>Data 실시간 활용</li>
+    </div>
+  </body>
+</html>
