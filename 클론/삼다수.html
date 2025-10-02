@@ -21,8 +21,9 @@
       }
       .top {
         width: 1500px;
-        height: 140px;
+        height: 90px;
         margin: 0 206px;
+        padding-top: 50px;
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -42,13 +43,14 @@
       }
       .main {
         width: 100%;
+        height: 100%;
         margin: 0 auto;
         text-align: center;
       }
       .main .main1,
       .main .main2,
       .main .main3 {
-        padding: 250px;
+        padding: 150px 90px;
       }
       .main .main1 {
         background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
@@ -59,16 +61,65 @@
       .main .main3 {
         background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
       }
-      .main div .main div {
+      .main .main1 div,
+      .main .main2 div,
+      .main .main3 div {
         font-family: "Noto Sans";
+        padding: 0px 0 80px 0;
       }
-      .main div h3 {
+      .main .main1 div h3 {
         font-size: 30px;
         color: #0066ff;
       }
-      .main div p {
+      .main .main1 div p {
         font-size: 18px;
         color: #777;
+      }
+      .main .main2 div h3,
+      .main .main3 div h3 {
+        font-size: 30px;
+        color: #fff;
+      }
+      .main .main2 div p,
+      .main .main3 div p {
+        font-size: 18px;
+        color: #fff;
+      }
+      .main .main1 p:last-child img,
+      .main .main2 p.con2 img,
+      .main .main3 p.con2 img {
+        position: relative;
+        z-index: 1;
+      }
+      .main .main2 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg2.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 100px auto;
+      }
+      .main .main2 .btn a,
+      .main .main3 .btn a {
+        font-family: "Noto Sans";
+        font-size: 17px;
+        color: #fff;
+        line-height: 53px;
+      }
+      .main .main3 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg3.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 50px auto;
+      }
+      p.water {
+        position: fixed;
+        left: 48%;
+        top: 30%;
+        transform: translate(-50px, -50px);
+      }
+      p.water img {
+        width: 213px;
       }
     </style>
   </head>
@@ -91,68 +142,76 @@
           /></a>
         </div>
       </div>
-    </div>
-    <div class="main">
-      <div class="main1">
-        <div>
-          <h3>THE WATER</h3>
-          <p>깨끗하고, 건강하고, 맛있는 물</p>
+      <div class="main">
+        <div class="main1">
+          <div>
+            <h3>THE WATER</h3>
+            <p>깨끗하고, 건강하고, 맛있는 물</p>
+          </div>
+          <div>
+            <p>
+              <img
+                src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
+                alt=""
+              />
+            </p>
+            <p>
+              <img
+                src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+                alt=""
+              />
+            </p>
+          </div>
         </div>
-        <div>
-          <p>
-            <img
-              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
-              alt=""
-            />
-          </p>
-          <p>
-            <img
-              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
-              alt=""
-            />
-          </p>
+        <div class="main2">
+          <div>
+            <h3>ONLY ONE</h3>
+            <p>진정한 제주다움 실현</p>
+          </div>
+          <div>
+            <p>
+              <img
+                src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
+                alt=""
+              />
+            </p>
+            <p class="con2">
+              <img
+                src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
+                alt=""
+              />
+            </p>
+            <div class="btn"><a href="#">MORE +</a></div>
+          </div>
+        </div>
+        <div class="main3">
+          <div>
+            <h3>SUSTAINABLE</h3>
+            <p>제주의 청정 자연과 공존하는 제주삼다수</p>
+          </div>
+          <div>
+            <p>
+              <img
+                src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
+                alt=""
+              />
+            </p>
+            <p class="con2">
+              <img
+                src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
+                alt=""
+              />
+            </p>
+            <div class="btn"><a href="#">MORE +</a></div>
+          </div>
         </div>
       </div>
-      <div class="main2">
-        <div>
-          <h3>ONLY ONE</h3>
-          <p>진정한 제주다움 실현</p>
-        </div>
-        <div>
-          <p>
-            <img
-              src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
-              alt=""
-            />
-          </p>
-          <p>
-            <img
-              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
-              alt=""
-            />
-          </p>
-        </div>
-      </div>
-      <div class="main3">
-        <div>
-          <h3>ONLY ONE</h3>
-          <p>진정한 제주다움 실현</p>
-        </div>
-        <div>
-          <p>
-            <img
-              src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
-              alt=""
-            />
-          </p>
-          <p>
-            <img
-              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
-              alt=""
-            />
-          </p>
-        </div>
-      </div>
+      <p class="water">
+        <img
+          src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
+          alt=""
+        />
+      </p>
     </div>
   </body>
 </html>

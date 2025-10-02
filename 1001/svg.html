@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+      div p {
+        width: 100%;
+        height: 100%;
+        clip-path: url(#path1);
+      }
+      div p img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      svg {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p><img src="../images/photo1.jpg" alt="photo1" /></p>
+      <svg>
+        <clipPath id="path1">
+          <polygon
+            points="234.2,411.6 103.2,474 133.4,332.1 33.6,226.8 177.8,211.7 247.1,84.2 306.2,216.7 448.8,243.3 
+              341,340.3 359.8,484.2"
+          />
+        </clipPath>
+      </svg>
+    </div>
+  </body>
+</html>

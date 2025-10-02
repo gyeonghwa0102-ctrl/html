@@ -1,0 +1,209 @@
+@charset "utf-8";
+* {
+  margin: 0%;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+section#maintop {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+body {
+  background-color: #fefef2;
+}
+.top {
+  width: 1745px;
+  position: relative;
+  margin: 0 auto;
+}
+.top ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.top ul li {
+  margin: 0 40px;
+  font-family: "Pretendard";
+  font-size: 15px;
+}
+.top p img {
+  display: block;
+  width: 242px;
+  margin: 0 auto;
+}
+.v-line {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  position: absolute;
+  left: 80px;
+}
+.img {
+  text-align: center;
+  position: relative;
+}
+.img p:nth-child(1) img {
+  width: 1745px;
+  height: 530px;
+  margin: 100px auto;
+  object-fit: cover;
+}
+.img p:nth-child(2) img {
+  position: absolute;
+  top: 50px;
+  left: 850px;
+  width: 167px;
+  height: 589px;
+}
+.scroll {
+  background-image: url(https://www.bekseju.com/images/ico-arrow-d.svg);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+}
+.scroll h6 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  padding-bottom: 50px;
+  font-family: "Pretendard";
+}
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  font-size: 0;
+}
+main section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main section div {
+  position: relative;
+}
+main section:nth-child(2) .photo {
+  background-color: #fefef2;
+}
+main section .txt a {
+  display: block;
+  aspect-ratio: 1/1.34;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+}
+main section .txt a h3 {
+  font-size: 30px;
+}
+main section .txt a h4 {
+  font-size: 17px;
+}
+main section .txt a h5 {
+  font-style: 14px;
+}
+main section:first-child .txt a {
+  background-image: url(https://www.bekseju.com/images/main-story-bg.png);
+}
+main section:nth-child(2) .txt a {
+  background-image: url(https://www.bekseju.com/images/main-craft-bg.png);
+}
+main section:last-child .txt a {
+  background-image: url(https://www.bekseju.com/images/main-taste-bg.png);
+}
+main section > div.photo {
+  aspect-ratio: 1/1.34;
+}
+main section:nth-child(2) > div.medi {
+  height: 100%;
+}
+main section > div.medi p {
+  height: 100%;
+}
+main section img,
+main section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main section .bek img {
+  transform: scale(94%);
+}
+main section div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 100%;
+  background-image: url(https://www.bekseju.com/images/p.png);
+  z-index: 2;
+}
+main section:first-child div:before {
+  right: -4px;
+}
+main section:last-child div:before {
+  left: -4px;
+}
+main section div:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-image: url(https://www.bekseju.com/images/ph.png);
+  z-index: 2;
+}
+.bphoto {
+  position: relative;
+  top: -60px;
+  z-index: 3;
+}
+footer {
+  position: relative;
+  top: -70px;
+  background-color: #242902;
+  padding: 0 0 50px;
+}
+footer .bot {
+  font-family: "Pretendard";
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 130px 40px 0;
+}
+footer .bot ul {
+  display: flex;
+  gap: 20px;
+}
+footer .bottom li {
+  font-family: "Pretendard";
+  font-size: 14px;
+}
+footer .bottom {
+  display: flex;
+  position: relative;
+  color: #fff;
+  gap: 50px;
+  padding-top: 55px;
+  margin: 0 40px;
+}
+footer .bottom .logo img {
+  width: 224px;
+}
+footer .bottom .sns img {
+  width: 28px;
+}
+footer .bottom .logo2 img {
+  width: 108px;
+  position: absolute;
+  margin-left: auto;
+  right: 0;
+  bottom: 0;
+}
