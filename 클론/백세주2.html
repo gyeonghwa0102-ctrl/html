@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백세주 스토리</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      section#maintop {
+        width: 100vw;
+        height: 36px;
+        padding: 16px 0;
+        background-color: #fefef2;
+        position: fixed;
+      }
+      .top {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 80px;
+      }
+      .top::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100vw;
+        height: 13px;
+        background-image: url(https://www.bekseju.com/images/sub-header-tail.png);
+        z-index: 2;
+      }
+      .top li a {
+        font-size: 15px;
+        font-family: "Pretendard";
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #999;
+      }
+      .top li:first-child a {
+        color: #222;
+      }
+      .top li img {
+        display: block;
+        width: auto;
+        height: 36px;
+      }
+      main {
+        background-color: #100900;
+      }
+      main .fir li {
+        font-size: 29px;
+        color: #fff;
+      }
+      main .fir li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      main .sec {
+        height: auto;
+        background-image: url(https://www.bekseju.com/images/story-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        top: -10px;
+        padding: 250px 150px;
+      }
+      main .sec li:first-child img {
+        width: 609px;
+        height: auto;
+      }
+      main .sec li:nth-child(2) .txt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      main .sec li:nth-child(2) .txt li:first-child {
+        font-family: "Pretendard";
+        color: #fff;
+        padding: 0 150px;
+      }
+      main .sec li:nth-child(2) .txt li h3 {
+        font-size: 29px;
+      }
+      main .sec li:nth-child(2) .txt li p {
+        font-size: 19px;
+        padding: 5px;
+      }
+      main .sec li:nth-child(2) .txt img {
+        width: 381px;
+      }
+      main .sec li:last-child .img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 150px;
+      }
+      main .sec li:last-child .img li:first-child img {
+        width: 381px;
+      }
+      main .sec li:last-child .img li:last-child img {
+        width: 609px;
+        padding-top: 170px;
+      }
+      main .trd {
+        background-color: #fffbc4;
+      }
+
+      main .trd .trdtop img {
+        width: 100%;
+        height: 80px;
+        position: relative;
+        top: -80px;
+      }
+      main .trd .trdcon {
+        padding: 120px 210px;
+        font-family: "Pretendard";
+        color: #444;
+      }
+      main .trd .trdcon h3 {
+        font-size: 29px;
+        padding-bottom: 8px;
+        font-weight: 300;
+      }
+      main .trd .trdcon p {
+        font-size: 19px;
+      }
+      main .trd li:last-child img {
+        width: 888px;
+        margin-left: 592px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="maintop">
+      <ul class="top">
+        <li><a href="#">story</a></li>
+        <li><a href="#">craft</a></li>
+        <li>
+          <a href="#"
+            ><img src="https://www.bekseju.com/images/logo.svg" alt="logo"
+          /></a>
+        </li>
+        <li><a href="#">taste</a></li>
+        <li><a href="#">news</a></li>
+      </ul>
+    </section>
+    <section>
+      <main>
+        <ul class="fir">
+          <li>백년을 잇는 향기</li>
+          <li>
+            <img
+              src="https://www.bekseju.com/images/story-san.png"
+              alt="main"
+            />
+          </li>
+        </ul>
+        <ul class="sec">
+          <li>
+            <img src="https://www.bekseju.com/images/img-story-1.jpg" alt="" />
+          </li>
+          <li>
+            <ul class="txt">
+              <li>
+                <h3>향기로운 우리 술</h3>
+                <p>
+                  우리 술에는 깊은 향취가 있습니다. 쌀과 누룩으로 빚지만, 술을
+                  빚는 과정에서 <br />은은하면서도 기분 좋은 향미가 피어납니다.
+                  맑은 향기 가득했던 우리 술을 <br />고스란히 이어받아 향까지
+                  음미할 수 있는 술을 빚습니다.
+                </p>
+              </li>
+              <li>
+                <img
+                  src="https://www.bekseju.com/images/img-story-2.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+            <ul class="img">
+              <li>
+                <img
+                  src="https://www.bekseju.com/images/img-story-3.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="https://www.bekseju.com/images/img-story-4.jpg"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="trd">
+          <li class="trdtop">
+            <img src="https://www.bekseju.com/images/bo5.png" alt="" />
+          </li>
+          <li class="trdcon">
+            <ul>
+              <li>
+                <h3>맛을 돋우는 술</h3>
+                <p>
+                  음식과 함께 즐기는 먹을거리이기에 조화를 생각하며 산뜻한
+                  <br />맛을 빚습니다. 발효 과정에서 생기는 기분 좋은 산미와
+                  은은한 <br />감미의 여운이 깔끔합니다.
+                </p>
+              </li>
+              <li><img src="./캡처.PNG" alt="" /></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="four">
+          <p>
+            <img src="https://www.bekseju.com/images/heritage-bg.jpg" alt="" />
+          </p>
+          <h3></h3>
+          <hr />
+          <h3></h3>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
