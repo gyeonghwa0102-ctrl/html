@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백세주</title>
+    <style>
+      /* 후버기능, h5 안보임, 바닥 여백문제 질문 */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      #maintop {
+        background-color: #fefef2;
+        position: relative;
+        height: 850px;
+        position: sticky;
+        top: 0;
+      }
+      #maintop:before {
+        content: "";
+        background-image: url(https://www.bekseju.com/images/line-g.png);
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        left: 40px;
+        top: 0;
+        z-index: 5;
+      }
+      #maintop::after {
+        content: "";
+        background-image: url(https://www.bekseju.com/images/line-g.png);
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        right: 40px;
+        top: 0;
+        z-index: 5;
+      }
+      .top {
+        width: 1800px;
+        position: relative;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .top ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .top ul li {
+        margin: 0 40px;
+        font-family: "Pretendard";
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .top p img {
+        display: block;
+        width: 242px;
+        margin: 0 auto;
+      }
+      .img:before {
+        content: "";
+        background-image: url(https://www.bekseju.com/images/line-g.png);
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 0;
+        z-index: 5;
+      }
+      .img {
+        width: 1825px;
+        margin: 0px auto;
+        text-align: center;
+        position: relative;
+      }
+      .img p:nth-child(1) img {
+        width: 1745px;
+        height: 530px;
+        margin: 100px auto;
+        object-fit: cover;
+      }
+      .img p:nth-child(2) img {
+        position: absolute;
+        top: 50px;
+        left: 800px;
+        width: 167px;
+        height: 589px;
+      }
+      .img .scroll {
+        background-image: url(https://www.bekseju.com/images/ico-arrow-d.svg);
+        background-repeat: no-repeat;
+        background-size: 24px;
+        background-position: center bottom;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        font-family: "Pretendard";
+        position: absolute;
+        top: 680px;
+        left: 850px;
+      }
+      main {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        font-size: 0;
+        bottom: 0;
+      }
+      main section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      main section div {
+        position: relative;
+      }
+      main section:nth-child(2) .photo {
+        background-color: #fefef2;
+      }
+      main section .txt a {
+        display: block;
+        
+        aspect-ratio: 1/1.34;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+      }
+      main section .txt a h3 {
+        font-size: 30px;
+      }
+      main section .txt a h4 {
+        font-size: 17px;
+      }
+      main section .txt a h5 {
+        font-style: 14px;
+      }
+      main section:first-child .txt a {
+        background-image: url(https://www.bekseju.com/images/main-story-bg.png);
+      }
+      main section:nth-child(2) .txt a {
+        background-image: url(https://www.bekseju.com/images/main-craft-bg.png);
+      }
+      main section:last-child .txt a {
+        background-image: url(https://www.bekseju.com/images/main-taste-bg.png);
+      }
+      main section > div.photo {
+        aspect-ratio: 1/1.34;
+      }
+      main section:nth-child(2) > div.medi {
+        height: 100%;
+      }
+      main section > div.medi p {
+        height: 100%;
+      }
+      main section img,
+      main section video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      main section .bek img {
+        transform: scale(94%);
+      }
+      main section div:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 8px;
+        height: 100%;
+        background-image: url(https://www.bekseju.com/images/p.png);
+        z-index: 2;
+      }
+      main section:first-child div:before {
+        right: -4px;
+      }
+      main section:last-child div:before {
+        left: -4px;
+      }
+      main section div:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-image: url(https://www.bekseju.com/images/ph.png);
+        z-index: 2;
+      }
+      .bphoto {
+         position: relative;
+         top: -60px;
+         z-index: 3;
+       }
+      footer {
+         position: relative;
+         top: -70px;
+         bottom: 0;
+         background-color: #242902;
+         padding: 0 0 50px;
+       }
+      footer .bot {
+         font-family: "Pretendard";
+         font-size: 15px;
+         display: flex;
+         justify-content: space-between;
+         color: #fff;
+         padding: 130px 40px 0;
+       }
+     footer .bot ul {
+         display: flex;
+         gap: 20px;
+       }
+     footer .bottom li {
+         font-family: "Pretendard";
+         font-size: 14px;
+       }
+     footer .bottom {
+         display: flex;
+         position: relative;
+         color: #fff;
+          gap: 50px;
+         padding-top: 55px;
+         margin: 0 40px;
+      }
+     footer .bottom .logo img {
+         width: 224px;
+      }
+     footer .bottom .sns img {
+         width: 28px;
+      }
+    footer .bottom .logo2 img {
+       width: 108px;
+       position: absolute;
+       margin-left: auto;
+       right: 0;
+       bottom: 0;
+     }
+    </style>
+  </head>
+  <body>
+    <section id="maintop">
+      <div class="top">
+        <ul>
+          <li>Korean Traditional Wine</li>
+          <li>BEKSEJU</li>
+        </ul>
+        <p>
+          <a href="#"
+            ><img src="https://www.bekseju.com/images/logo.svg" alt="logo"
+          /></a>
+        </p>
+      </div>
+      <div class="img">
+        <p>
+          <img src="https://www.bekseju.com/images/mainbg.jpg" alt="bg" />
+        </p>
+        <p>
+          <img src="https://www.bekseju.com/images/img-bottle.png" alt="bot" />
+        </p>
+        <h6 class="scroll">scroll</h6>
+      </div>
+    </section>
+    <main>
+      <section>
+        <div class="txt">
+          <p><img src="https://www.bekseju.com/images/h-bo1.png" alt="" /></p>
+          <a href="#">
+            <h3>STORY</h3>
+            <h4>백년을 잇는 향기</h4>
+            <h5>자세히 보기</h5>
+          </a>
+        </div>
+        <div class="photo medi">
+          <p>
+            <video muted autoplay loop>
+              <source src="https://www.bekseju.com/images/main_video_1.mp4" />
+            </video>
+          </p>
+        </div>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/main-3.jpg" alt="" /></p>
+        </div>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/main-4.jpg" alt="" /></p>
+        </div>
+      </section>
+      <section>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/h-bo2.png" alt="" /></p>
+          <p class="bek">
+            <img src="https://www.bekseju.com/images/bek.png" alt="" />
+          </p>
+        </div>
+        <div class="txt">
+          <a href="#">
+            <h3>CRAFT</h3>
+            <h4>정취를 빚어내는 여정</h4>
+            <h5>자세히 보기</h5>
+          </a>
+        </div>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/main-1.jpg" alt="" /></p>
+        </div>
+        <div class="photo medi">
+          <p>
+            <video muted autoplay loop>
+              <source src="https://www.bekseju.com/images/main_video_3.mp4" />
+            </video>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="txt">
+          <p><img src="https://www.bekseju.com/images/h-bo3.png" alt="" /></p>
+          <a href="#">
+            <h3>TASTE</h3>
+            <h4>조화의 미학, 산뜻한 향, 긴 여운</h4>
+            <h5>자세히 보기</h5>
+          </a>
+        </div>
+        <div class="photo medi">
+          <p>
+            <video muted autoplay loop>
+              <source src="https://www.bekseju.com/images/main_video_2.mp4" />
+            </video>
+          </p>
+        </div>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/main-6.jpg" alt="" /></p>
+        </div>
+        <div class="photo">
+          <p><img src="https://www.bekseju.com/images/main-5.jpg" alt="" /></p>
+        </div>
+      </section>
+    </main>
+    <div class="bphoto">
+      <img src="https://www.bekseju.com/images/img-ft-top.png" alt="" />
+    </div>
+    <footer>
+      <div class="bot">
+        <p>Learn from the Tradition</p>
+        <ul>
+          <li>Korean Traditional Wine</li>
+          <li>BEKSEJU</li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <p class="logo">
+          <img src="https://www.bekseju.com/images/logo-w.svg" alt="logo" />
+        </p><ul>
+          <li>대표 : 배상민</li>
+          <li>사업자등록번호 : 124-81-14925</li>
+          <li>고객센터 : 080-0035-100</li>
+          <li>주소 : 강원특별자치도 횡성군 둔내면 강변로 975</li>
+        </ul>
+        <ul>
+          <li>COPYRIGHT © 2024 KOOKSOONDANG</li>
+          <li>ALL RIGHTS RESERVED</li>
+        </ul>
+        <p class="sns">
+          <a href="#"><img src="	https://www.bekseju.com/images/ico-insta.svg" alt="" /></a>
+        </p>
+        <p class="logo2">
+          <img src="	https://www.bekseju.com/images/logo-ksd.svg" alt="">
+        </p>
+    </footer>
+  </body>
+</html>
