@@ -22,6 +22,11 @@
       .top {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 0 54px;
+        position: relative;
+        position: sticky;
       }
       .menu a {
         font-family: "Pretendard";
@@ -29,6 +34,7 @@
       }
       .menu > ul {
         display: flex;
+        align-items: center;
         width: 1160px;
         height: 105px;
       }
@@ -41,7 +47,8 @@
         font-size: 24px;
       }
       .menu > ul > li .sub a {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 45px;
       }
       .menu > ul > li .sub {
         position: absolute;
@@ -51,23 +58,56 @@
         background-color: #fff;
         height: 0;
         overflow: hidden;
+        z-index: 1;
       }
       .menu > ul:hover > li .sub {
-        height: 120px;
+        height: 300px;
       }
       .menu > ul > li .sub li:hover a {
-        color: #333;
-      }
-      .menu > ul > li .sub li a:hover {
         font-weight: bold;
         background: #eee;
+        padding: 10px 20px;
         border-radius: 20px;
+      }
+      .menu > ul > li .sub li a:hover {
+        color: #333;
+      }
+      .menu .bg {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        background: #fff;
+        border-radius: 20px;
+      }
+      .menu > ul:hover ~ .bg {
+        height: 300px;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .right img {
+        padding: 0 15px;
+      }
+      .right > p > a {
+        font-family: "Pretendard";
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #eee;
+        border-radius: 20px;
+        padding: 5px 10px;
+        line-height: 20px;
       }
     </style>
   </head>
   <body>
     <div class="top">
-      <div class="logo">로고</div>
+      <div class="logo">
+        <a href="#"><img src="https://spc.co.kr/img/logo.svg" alt="logo" /></a>
+      </div>
       <div class="menu">
         <ul>
           <li>
@@ -131,8 +171,17 @@
             </ul>
           </li>
         </ul>
+        <div class="bg"></div>
       </div>
-      <div class="right">오른쪽 메뉴</div>
+      <div class="right">
+        <p><a href="#">careers</a></p>
+        <a href="#">
+          <img
+            src="	https://spc.co.kr/img/front/icon/icon_global.svg"
+            alt="global"
+          />
+        </a>
+      </div>
     </div>
   </body>
 </html>
