@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+      section ul li {
+        background: #ccc;
+        flex: 1 0 40%;
+        padding-top: 50%;
+        /* height: 300px; */
+        background-size: cover;
+      }
+      section ul li:nth-child(1) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/07/20/08/07/alley-9723861_640.jpg);
+      }
+      section ul li:nth-child(2) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/10/05/15/06/autumn-9875155_640.jpg);
+      }
+      section ul li:nth-child(3) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/21/08/39/fluffy-dog-9846034_640.jpg);
+      }
+      section ul li:nth-child(4) {
+        background-image: url(https://cdn.pixabay.com/photo/2025/09/18/07/06/winding-path-9840681_640.jpg);
+      }
+      @media screen and(max-width:1024px) {
+        section ul li {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+  </body>
+</html>

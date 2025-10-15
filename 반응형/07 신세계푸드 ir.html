@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+        height: 424px;
+        display: grid;
+        gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      section ul li {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: #fff;
+      }
+      section ul li::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      section ul li:hover .txt h1 {
+        color: #f29b76;
+      }
+      section ul li:hover {
+        filter: brightness(80%);
+      }
+      section ul li .txt {
+        position: relative;
+        z-index: 1;
+      }
+      section ul li:nth-child(1) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+      }
+      section ul li:nth-child(2) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+      }
+      section ul li:nth-child(3) {
+        background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+      }
+      @media screen and (max-width: 960px) {
+        section ul {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <div class="txt">
+            <h1>경영정보</h1>
+            <p>주주 및 이사회 구성을 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>재무정보</h1>
+            <p>영업현황 및 재무제표를 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+        <li>
+          <div class="txt">
+            <h1>주식정보</h1>
+            <p>주가정보를 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

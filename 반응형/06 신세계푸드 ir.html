@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      section ul {
+        width: 100%;
+
+        display: grid;
+        gap: 3px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        position: relative;
+      }
+      section ul li {
+        overflow: hidden;
+        filter: brightness(50%);
+      }
+      section ul li .txt {
+        font-family: "Pretendard";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+      }
+      section ul li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      section ul li:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      section ul li:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      section ul li:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      @media screen and (max-width: 950px) {
+        section ul li {
+          height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <ul>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/management/bg_info_1.jpg"
+            alt=""
+          />
+          <div class="txt">
+            <h1>경영정보</h1>
+            <p>주주 및 이사회 구성을 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/management/bg_info_2.jpg"
+            alt=""
+          />
+          <div class="txt">
+            <h1>재무정보</h1>
+            <p>영업현황 및 재무제표를 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.shinsegaefood.com/images/management/bg_info_3.jpg"
+            alt=""
+          />
+          <div class="txt">
+            <h1>주식정보</h1>
+            <p>주가정보를 <br />안내해 드립니다.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

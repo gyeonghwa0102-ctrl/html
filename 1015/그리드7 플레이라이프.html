@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .con {
+        width: 1800px;
+        height: 966px;
+        gap: 50px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr;
+      }
+      .con .item {
+        position: relative;
+        overflow: hidden;
+      }
+      .con .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+      }
+      .con .item:nth-child(1) img {
+        filter: brightness(80%);
+      }
+      .con .item .txt {
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        font-family: "Pretendard";
+        color: #fff;
+      }
+      .con .item .txt p {
+        font-size: 26px;
+      }
+      .con .item .txt span {
+        font-size: 18px;
+      }
+      .con .item:nth-child(1) .txt {
+        line-height: 100px;
+        text-align: center;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+      }
+      .con .item:nth-child(1) .txt p {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .con .item:nth-child(1) .txt h2 {
+        font-size: 48px;
+        margin-top: 14px;
+      }
+      .con .item:nth-child(1) .txt span::before {
+        content: "|";
+        padding: 0 10px;
+      }
+      .con .item:nth-child(2) img,
+      .con .item:nth-child(3) img,
+      .con .item:nth-child(4) img,
+      .con .item:nth-child(5) img {
+        transition: 0.5s;
+      }
+
+      .con .item:nth-child(2):hover img,
+      .con .item:nth-child(3):hover img,
+      .con .item:nth-child(4):hover img,
+      .con .item:nth-child(5):hover img {
+        filter: brightness(100%);
+      }
+      .con .item:nth-child(2):hover .txt,
+      .con .item:nth-child(3):hover .txt,
+      .con .item:nth-child(4):hover .txt,
+      .con .item:nth-child(5):hover .txt {
+        opacity: 0;
+      }
+      .con .item:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+      }
+      .con .item:nth-child(2) {
+        grid-column: 2;
+        grid-row: 1 / 3;
+      }
+      .con .item:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      .con .item:nth-child(4) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+      .con .item:nth-child(5) {
+        grid-column: 3;
+        grid-row: 2/4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="item">
+        <img
+          src="https://playlife.kr/wp-content/uploads/2025/09/221.png"
+          alt=""
+        />
+        <div class="txt">
+          <p>PEOPLE</p>
+          <h2>한 번쯤 못해도 큰일 나지 않아요</h2>
+          <span>손성원</span><span>한국일보기자</span>
+        </div>
+      </div>
+      <div class="item">
+        <img
+          src="https://playlife.kr/wp-content/uploads/2025/08/%EC%8D%B8%EB%84%A4%EC%9D%BC-1.png"
+          alt=""
+        />
+        <div class="txt">
+          <h2>있는 그대로의 나를 사랑하는 법</h2>
+          <span>써니</span>
+        </div>
+      </div>
+      <div class="item">
+        <img
+          src="https://playlife.kr/wp-content/uploads/2025/07/250721_%ED%94%BC%ED%94%8C_%EC%8D%B8%EB%84%A4%EC%9D%BCpng-1.png"
+          alt=""
+        />
+        <div class="txt">
+          <h2>감각하고 이완하는 시인의 휴식</h2>
+          <span>이훤</span>
+        </div>
+      </div>
+      <div class="item">
+        <img
+          src="https://playlife.kr/wp-content/uploads/2025/06/250620_%ED%94%BC%ED%94%8C01.png"
+          alt=""
+        />
+        <div class="txt">
+          <h2>뇌에 힘준다고 우울이 낫지 않아요</h2>
+          <span>오지은</span>
+        </div>
+      </div>
+      <div class="item">
+        <img
+          src="https://playlife.kr/wp-content/uploads/2025/05/s1.png"
+          alt=""
+        />
+        <div class="txt">
+          <h2>세월이 깃든 것에서 얻는 영감</h2>
+          <span>김하늘</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
