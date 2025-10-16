@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .foot {
+        width: 100%;
+        max-width: 1680px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        /* grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 205px; */
+      }
+      .foot ul {
+        display: flex;
+      }
+      /* .foot ul:nth-child(1) {
+        grid-column: 1;
+      }
+      .foot ul:nth-child(2) {
+        grid-column: 2;
+      }
+      .foot ul:nth-child(3) {
+        grid-column: 3;
+      } */
+      .foot ul li {
+        display: flex;
+        padding: 0 46px;
+        gap: 5px;
+      }
+      .foot ul .textarea {
+        font-family: "Pretendard";
+      }
+      .foot ul .textarea h4 {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+      .foot ul .textarea p {
+        font-size: 20px;
+        color: #666;
+      }
+      .foot ul .link a {
+        font-family: "Pretendard";
+        font-size: 18px;
+        text-decoration: underline;
+      }
+      .foot ul li:after {
+        content: "";
+        background-color: #ddd;
+        width: 1px;
+        height: 100%;
+      }
+      .foot ul li:last-child::after {
+        content: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="foot">
+      <ul>
+        <li>
+          <div class="textarea">
+            <h4>오픈소싱</h4>
+            <p>
+              내부 심의를 통해 선정된 업체는 당사의 아웃소싱 데이터베이스로
+              관리합니다.
+            </p>
+          </div>
+          <div class="thum">
+            <img
+              src="https://www.samsungshi.com/images/main/icon_source.png"
+              alt=""
+            />
+          </div>
+          <div class="link">
+            <a href="#">더보기</a>
+          </div>
+        </li>
+        <li>
+          <div class="textarea">
+            <h4>방문신청</h4>
+            <p>
+              협력업체 지원신청, 출입 예약 시스템으로 편리한 방문신청이
+              가능합니다.
+            </p>
+          </div>
+          <div class="thum">
+            <img
+              src="https://www.samsungshi.com/images/main/icon_visit.png"
+              alt=""
+            />
+          </div>
+          <div class="link">
+            <a href="#">더보기</a>
+          </div>
+        </li>
+        <li>
+          <div class="textarea">
+            <h4>윤리경영/제보</h4>
+            <p>
+              임직원의 불공정한 업무처리 및 비리에 대한 제보를 받으며, 비공개
+              방식으로 처리됩니다.
+            </p>
+          </div>
+          <div class="thum">
+            <img
+              src="https://www.samsungshi.com/images/main/icon_suggest.png"
+              alt=""
+            />
+          </div>
+          <div class="link">
+            <a href="#">더보기</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

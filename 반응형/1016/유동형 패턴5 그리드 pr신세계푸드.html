@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "NanumBarunGothic";
+        src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+        font-weight: 400;
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .con {
+        width: 100%;
+        max-width: 920px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row: 1fr;
+      }
+      .con .img {
+        grid-column: 1/2;
+      }
+      .tcon {
+        font-family: "NanumBarunGothic";
+      }
+      .tcon .txt {
+        grid-column: 3;
+        grid-row: 1;
+        padding: 25px 30px;
+      }
+      .tcon .txt h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .tcon .txt p {
+        font-size: 15px;
+        line-height: 200%;
+        margin-bottom: 25px;
+        color: #444;
+      }
+      .tcon .info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        color: #444;
+      }
+      @media screen and (max-width: 960px) {
+      }
+      @media screen and (max-width: 780px) {
+        .con {
+          grid-template-columns: 1fr;
+        }
+        .tcon .txt {
+          padding: 15px;
+        }
+        .tcon .txt h1 {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+        .tcon .txt p {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+        .tcon .info {
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="img">
+        <img
+          src="	https://www.shinsegaefood.com/uimages/2025/10/16/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="tcon">
+        <div class="txt">
+          <h1>베이커리 명가 ‘신세계푸드’와 베이커리 ‘박준서 명장’이 만나다</h1>
+          <p>
+            신세계푸드, SSG닷컴 오프라인 페스타 ‘美지엄’에 베이커리 박준서 명장
+            부스 선보여 박준서 명장, 대한민국 제과제?빵 명장으로 주요 베이커리
+            대회 다수 수상 경력 신세계푸드, 박준서 명장 베이커리 5종 선보여…
+            행사 현장 QR통해 최대 44% 할인 제공
+          </p>
+        </div>
+        <div class="info">
+          <p>2025.10.16</p>
+          <p>보도자료</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

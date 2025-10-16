@@ -18,6 +18,94 @@
         text-decoration: none;
         color: #333;
       }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 0 54px;
+        position: relative;
+        /* position: sticky; */
+        z-index: 1;
+      }
+      .menu{
+        position: static;
+        top: 0;
+        z-index: 2;
+      }
+      .menu a {
+        font-family: "Pretendard";
+        font-weight: bold;
+      }
+      .menu > ul {
+        display: flex;
+        align-items: center;
+        width: 1160px;
+        height: 105px;
+      }
+      .menu > ul > li {
+        flex: 1;
+        text-align: center;
+        position: relative;
+      }
+      .menu > ul > li > a {
+        font-size: 24px;
+      }
+      .menu > ul > li .sub a {
+        font-size: 18px;
+        line-height: 45px;
+      }
+      .menu > ul > li .sub {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background-color: #fff;
+        height: 0;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .menu > ul:hover > li .sub {
+        height: 300px;
+      }
+      .menu > ul > li .sub li:hover a {
+        font-weight: bold;
+        background: #eee;
+        padding: 10px 20px;
+        border-radius: 20px;
+      }
+      .menu > ul > li .sub li a:hover {
+        color: #333;
+      }
+      .menu .bg {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 90px;
+        background: #fff;
+        border-radius: 20px;
+      }
+      .menu > ul:hover ~ .bg {
+        height: 300px;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .right img {
+        padding: 0 15px;
+      }
+      .right > p > a {
+        font-family: "Pretendard";
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #eee;
+        border-radius: 20px;
+        padding: 5px 10px;
+        line-height: 20px;
+      }
       .con {
         display: grid;
         width: 1800px;
@@ -300,6 +388,85 @@
     </style>
   </head>
   <body>
+    <div class="top">
+      <div class="logo">
+        <a href="#"><img src="https://spc.co.kr/img/logo.svg" alt="logo" /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#">ABOUT SPC</a>
+            <ul class="sub">
+              <li><a href="#">SPC WAY</a></li>
+              <li><a href="#">R&D</a></li>
+              <li><a href="#">관계사</a></li>
+              <li><a href="#">글로벌</a></li>
+              <li><a href="#">CI소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">HISTORY</a>
+            <ul class="sub">
+              <li><a href="#">헤리티지</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">BRANDC</a>
+            <ul class="sub">
+              <li><a href="#">베이커리</a></li>
+              <li><a href="#">디저트</a></li>
+              <li><a href="#">외식/다이닝</a></li>
+              <li><a href="#">커피/음료</a></li>
+              <li><a href="#">유통/서비스</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">SPC NOW</a>
+            <ul class="sub">
+              <li><a href="#">뉴스</a></li>
+              <li><a href="#">매거진</a></li>
+              <li><a href="#">SNS</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">COMPLIANCE</a>
+            <ul class="sub">
+              <li><a href="#">준법경영</a></li>
+              <li><a href="#">정도경영</a></li>
+              <li><a href="#">안전경영</a></li>
+              <li><a href="#">핫라인 제보</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">ESG</a>
+            <ul class="sub">
+              <li><a href="#">ESG경영</a></li>
+              <li><a href="#">행복한 재단</a></li>
+              <li><a href="#">사회공헌</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">SUPPORT</a>
+            <ul class="sub">
+              <li><a href="#">가맹문의</a></li>
+              <li><a href="#">위치 안내</a></li>
+              <li><a href="#">문의하기</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="bg"></div>
+      </div>
+      <div class="right">
+        <p><a href="#">careers</a></p>
+        <a href="#">
+          <img
+            src="	https://spc.co.kr/img/front/icon/icon_global.svg"
+            alt="global"
+          />
+        </a>
+      </div>
+    </div>
     <div class="con">
       <div class="item">
         <img
