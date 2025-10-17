@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      ul.yb {
+        width: 95%;
+        max-width: 1480px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      ul.yb li {
+        display: flex;
+        gap: 104px;
+        align-items: center;
+        height: 440px;
+      }
+      .yb li p {
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .yb li p img {
+        width: 720px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .yb li .txt {
+        width: 530px;
+        font-family: "Noto Sans";
+        /* flex-shrink: 1; */
+      }
+      .yb li .txt h3 {
+        color: #777;
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+      .yb li .txt h1 {
+        color: #222;
+        font-size: 48px;
+      }
+      .yb li .txt h2 {
+        color: #ffc72c;
+        font-size: 48px;
+        font-weight: bold;
+      }
+      .yb li:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+      @media screen and (max-width: 1024px) {
+        ul.yb li {
+          height: auto;
+        }
+        ul.yb li p {
+          width: 60%;
+          height: auto;
+        }
+        ul.yb li .txt {
+          width: 30%;
+        }
+        ul.yb li .txt h1,
+        ul.yb li .txt h2 {
+          font-size: 22px;
+        }
+        ul.yb li .txt h3 {
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        ul.yb li {
+          flex-direction: column;
+          text-align: flex-start;
+          gap: 40px;
+        }
+        ul.yb li:nth-child(even) {
+          flex-direction: column;
+          text-align: flex-start;
+        }
+        ul.yb li p {
+          width: 100%;
+        }
+        ul.yb li .txt {
+          width: 100%;
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="yb">
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>여행의 새로운 가치를 알립니다</h3>
+          <h1>가치를 전달하는 여행</h1>
+          <h2>Value-Creating</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>고객의, 고객에 의한, 고객을 위한</h3>
+          <h1>신뢰를 받는 여행</h1>
+          <h2>Trustworthy</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>일상의 가장 반짝이는 순간을 만듭니다</h3>
+          <h1>즐거움을 선사하는 여행</h1>
+          <h2>Joyful</h2>
+        </div>
+      </li>
+      <li>
+        <p>
+          <img
+            src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg"
+            alt=""
+          />
+        </p>
+        <div class="txt">
+          <h3>혁신적인 여행</h3>
+          <h1>신뢰를 받는 여행</h1>
+          <h2>Innovative</h2>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>

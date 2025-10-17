@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0 80px;
+      }
+      h1.obj {
+        font-family: "Noto Sans";
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      ul.con {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      ul.con .info {
+        background: #efe8e4;
+        border-radius: 10px;
+        padding: 64px 40px;
+        text-align: center;
+      }
+      ul.con .info li img {
+        object-fit: cover;
+      }
+      ul.con .info .txt {
+        margin-top: 48px;
+        font-family: "Noto Sans";
+        font-weight: bold;
+      }
+      ul.con .info .txt h1 > span {
+        color: #f37321;
+      }
+      ul.con .info .txt > hr {
+        margin-top: 32px;
+      }
+      ul.con .info .txt > p {
+        padding-top: 32px;
+        color: #616161;
+      }
+      @media screen and (max-width: 760px) {
+        ul.con {
+          grid-template-columns: 1fr;
+        }
+        h1.obj {
+          font-size: 42px;
+        }
+        ul.con .info {
+          padding: 28px 18px;
+        }
+        ul.con .info .txt {
+          padding-left: 18px;
+          text-align: left;
+        }
+        ul.con .info .txt > h1 {
+          font-style: 17px;
+        }
+        ul.con .info .txt > hr {
+          margin-top: 8px;
+        }
+        ul.con .info .txt > p {
+          padding-top: 8px;
+          font-style: 13px;
+        }
+        ul.con .info .txt p br {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="obj">Our Brand Values</h1>
+    <ul class="con">
+      <li>
+        <ul class="info">
+          <li>
+            <img
+              src="https://www.hanwha.com/assets/img/main/sustainable-and-inclusive-growth.svg"
+              alt=""
+            />
+            <div class="txt">
+              <h1>
+                Sustainable and <br />
+                Inclusive <span>Growth</span>
+              </h1>
+              <hr />
+              <p>
+                We strive for social, economic, and <br />
+                environmental prosperity for all
+              </p>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="info">
+          <li>
+            <img
+              src="https://www.hanwha.com/assets/img/main/technology-and-solution-driven-innovation.svg"
+              alt=""
+            />
+            <div class="txt">
+              <h1>
+                Technology and <br />
+                Solution-driven <span>Innovation</span>
+              </h1>
+              <hr />
+              <p>
+                Through technological innovation, <br />
+                we provide solutions from people to planet environmental
+              </p>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <ul class="info">
+          <li>
+            <img
+              src="https://www.hanwha.com/assets/img/main/hanwha-enhances-lives.svg"
+              alt=""
+            />
+            <div class="txt">
+              <h1>
+                Enhancing <br />
+                <span>Lives</span>
+              </h1>
+              <hr />
+              <p>
+                We lay the foundation for a fulfilling life through <br />
+                our technologies, products, and services
+              </p>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
