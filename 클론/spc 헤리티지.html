@@ -88,6 +88,49 @@
       .menu > ul:hover ~ .bg {
         height: 300px;
       }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .right img {
+        padding: 0 15px;
+      }
+      .right > p > a {
+        font-family: "Pretendard";
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #eee;
+        border-radius: 20px;
+        padding: 5px 10px;
+        line-height: 20px;
+      }
+      .right > a {
+        position: relative;
+      }
+      .right > a > ul {
+        overflow: hidden;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        left: 0;
+        top: 70px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+      .right > a > ul > li {
+        font-family: "Pretendard";
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+      .right > a:hover > ul {
+        height: 100px;
+        bottom: 0;
+        border: 1px solid #eee;
+      }
       .con {
         width: 1749px;
         height: 1770px;
@@ -96,6 +139,7 @@
         grid-template-columns: repeat(2, 1fr) 2fr;
         grid-template-rows: repeat(4, 1fr);
         gap: 20px;
+        padding: 54px 50px;
       }
       .con .item {
         position: relative;
@@ -151,6 +195,101 @@
       }
       .con .item:nth-child(7) {
         grid-column: 3 / 4;
+      }
+      .foot {
+        background: #f5f5f5;
+        height: 370px;
+        padding: 60px 54px;
+        ;
+      }
+      .foot .onfoot{
+        display: flex;
+        justify-content: space-between
+      }
+      .foot .onfoot .left .ftxt {
+        padding: 20px 0;
+        font-family: "Pretendard";
+        font-weight: bold;
+      }
+      .foot .onfoot .left .ftxt .adress {
+        margin-bottom: 10px;
+        color: rgba(0,0,0,0.5);
+      }
+      .foot .onfoot .left .ftxt .info .one {
+        display: flex;
+      }
+      .foot .onfoot .left .ftxt .info .two {
+        display: flex;
+        margin-top: 10px;
+      }
+      .foot .onfoot .left .ftxt .info .one li::after,
+      .foot .onfoot .left .ftxt .info .two li::after {
+        content: "|";
+        padding: 0 10px;
+      }
+      .foot .onfoot .left .ftxt .info .two li:last-child:after {
+        content: "";
+      }
+      .foot .onfoot .right >ul{
+        display: flex;
+        gap: 50px;
+      }
+      .foot .onfoot .right >ul >li{
+        text-align: center;
+        font-family: "Pretendard";
+        font-weight: bold;
+       
+      }
+      .foot .onfoot .right >ul >li >a{
+        display: inline-block;
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+      .foot .onfoot .right >ul >li .sub a{
+        display: inline-block;
+        font-size: 18px;
+        color: rgba(0,0,0,0.5);margin-bottom: 8px;
+        
+      }
+      .foot .site{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+        font-family: "Pretendard";
+      font-weight: bold;}
+
+
+      .foot .site .leftsite .fam{
+        display: flex;
+        font-size: 18px;
+        margin-right: 9px;
+        margin-bottom: 21px;
+        gap: 10px;
+        text-transform: uppercase;
+
+      }
+      .foot .site .leftsite .fam span{
+        display: inline-block;
+        background-color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        text-align: center;
+      }
+      .foot .site .copyr{
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .foot .sns{
+        display: flex;gap: 30px;
+      }
+      .foot .sns img{
+        width: 68px;
+      }
+      .topbtn{
+        background-color: #fff;
+        border-radius: 100% ;
+        width: 96px;
       }
     </style>
   </head>
@@ -231,6 +370,11 @@
             src="	https://spc.co.kr/img/front/icon/icon_global.svg"
             alt="global"
           />
+          <ul>
+            <li>ko</li>
+            <li>en</li>
+            <li>cn</li>
+          </ul>
         </a>
       </div>
     </div>
@@ -305,6 +449,112 @@
           <p>2019-현재</p>
           <h2>great food company</h2>
         </div>
+      </div>
+    </div>
+    <div class="foot">
+        <div class="onfoot">
+          <div class="left">
+            <div class="logo">
+              <img src="https://www.spc.co.kr/img/logo.svg" alt="logo" />
+            </div>
+            <div class="ftxt">
+              <p class="adress">
+                서울시 서초구 양재동 남부순환로 2620 (양재동 11-149)
+              </p>
+              <div class="info">
+                <ul class="one">
+                  <li>개인정보처리방침</li>
+                  <li>이메일수집 거부</li>
+                  <li>거래희망사전등록</li>
+                </ul>
+                <ul class="two">
+                  <li>고정형 영상정보처리기기</li>
+                  <li>운영관리 방침</li>
+                  <li>공지사항</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <ul>
+              <li>
+                <a href="#">ABOUT SPC</a>
+                <ul class="sub">
+                  <li><a href="#">SPC WAY</a></li>
+                  <li><a href="#">R&D</a></li>
+                  <li><a href="#">관계사</a></li>
+                  <li><a href="#">글로벌</a></li>
+                  <li><a href="#">CI소개</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">HISTORY</a>
+                <ul class="sub">
+                  <li><a href="#">헤리티지</a></li>
+                  <li><a href="#">연혁</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">BRANDC</a>
+                <ul class="sub">
+                  <li><a href="#">베이커리</a></li>
+                  <li><a href="#">디저트</a></li>
+                  <li><a href="#">외식/다이닝</a></li>
+                  <li><a href="#">커피/음료</a></li>
+                  <li><a href="#">유통/서비스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">SPC NOW</a>
+                <ul class="sub">
+                  <li><a href="#">뉴스</a></li>
+                  <li><a href="#">매거진</a></li>
+                  <li><a href="#">SNS</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">COMPLIANCE</a>
+                <ul class="sub">
+                  <li><a href="#">준법경영</a></li>
+                  <li><a href="#">정도경영</a></li>
+                  <li><a href="#">안전경영</a></li>
+                  <li><a href="#">핫라인 제보</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">ESG</a>
+                <ul class="sub">
+                  <li><a href="#">ESG경영</a></li>
+                  <li><a href="#">행복한 재단</a></li>
+                  <li><a href="#">사회공헌</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">SUPPORT</a>
+                <ul class="sub">
+                  <li><a href="#">가맹문의</a></li>
+                  <li><a href="#">위치 안내</a></li>
+                  <li><a href="#">문의하기</a></li>
+                </ul>
+              </li>
+          </div>
+        </div>
+      </onfoot>
+      <div class="site">
+        <div class="leftsite">
+          <div class="fam">
+            <p>Family Site</p>
+            <span class="material-symbols-outlined">add</span>
+          </div>
+          <div class="copyr">
+            <p>Copyright SPC All rights reserverd.</p>
+          </div>
+        </div>
+      <div class="sns">
+        <p><img src="https://www.spc.co.kr/img/front/icon/f_facebook.svg" alt=""></p>
+        <p><img src="	https://www.spc.co.kr/img/front/icon/f_instagram.svg" alt=""></p>
+        <p><img src="https://www.spc.co.kr/img/front/icon/f_youtube.svg" alt=""></p>
+      </div>  
       </div>
     </div>
   </body>
