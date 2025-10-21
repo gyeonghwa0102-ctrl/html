@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .top {
+        width: 100%;
+        max-width: 1800px;
+        height: 98px;
+        margin: 0 auto;
+        padding: 0 60p;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f5ebdc;
+      }
+      .top .menu > ul {
+        position: relative;
+        display: flex;
+        gap: 20px;
+        font-family: "FlameBold";
+        text-transform: uppercase;
+        overflow: hidden;
+        font-size: 24px;
+      }
+      /* .top .menu .sub > li {
+        font-family: "Pretendard";
+      }
+      .top .menu > ul > li:first-child:hover .sub {
+        height: 200px;
+      } */
+      .top .menu li {
+      }
+      .top .menu li .sub {
+        display: flex;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        height: 100px;
+        font-size: 17px;
+      }
+      .top .menu li:nth-child(2):hover .sub,
+      .top .menu li:nth-child(3):hover .sub {
+        height: 100px;
+      }
+      .top .right {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <a href="#"
+          ><img src="https://www.burgerking.co.kr/img/bg_logo.svg" alt=""
+        /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">menu</a></li>
+          <li>
+            <a href="#">story</a>
+            <ul class="sub">
+              <li>브랜드</li>
+              <li>Why 버거킹</li>
+              <li>ESG 경영</li>
+              <li>Smart QSR</li>
+              <li>수상실적</li>
+              <li>광고영상</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">news</a>
+            <ul class="sub">
+              <li>이벤트</li>
+              <li>공지사항</li>
+            </ul>
+          </li>
+          <li><a href="#">store</a></li>
+          <li><a href="#">customer</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <p>
+          <img
+            src="https://www.burgerking.co.kr/img/ico_tit_store.svg"
+            alt=""
+          />
+        </p>
+        <p><a href="#">가맹점 모집</a></p>
+      </div>
+    </div>
+  </body>
+</html>

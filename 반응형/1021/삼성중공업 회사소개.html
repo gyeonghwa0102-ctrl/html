@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        font-family: "Pretendard";
+        padding: 0 20px;
+        text-align: center;
+      }
+      #wrap h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      #wrap p {
+        position: relative;
+        font-size: 18px;
+        right: 0;
+        color: #666;
+        text-align: right;
+      }
+      #wrap .con ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 35px 0;
+      }
+      #wrap .con ul li {
+        display: flex;
+        gap: 150px;
+        padding: 45px 0;
+        width: 380px;
+      }
+      #wrap .con ul li:first-child,
+      #wrap .con ul li:nth-child(2),
+      #wrap .con ul li:nth-child(3) {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+      }
+      #wrap .con ul li p:first-child {
+        font-size: 22px;
+        color: #333;
+      }
+      #wrap .con ul li p:last-child {
+        font-size: 25px;
+        font-weight: bold;
+        color: #111;
+      }
+      @media screen and (max-width: 960px) {
+        #wrap .con ul {
+          gap: 0;
+        }
+      }
+      @media screen and (max-width: 760px) {
+        #wrap .con ul li {
+          gap: 100px;
+          padding: 36px 0;
+          width: 300px;
+        }
+        #wrap .con ul li p:first-child {
+          font-size: 17px;
+        }
+        #wrap .con ul li p:last-child {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 680px) {
+        #wrap h1 {
+          font-size: 40px;
+          margin-bottom: 16px;
+        }
+        #wrap p {
+          font-size: 14px;
+        }
+        #wrap .con ul li {
+          gap: 0;
+          flex-direction: column;
+          padding: 24px;
+          width: 290px;
+        }
+        #wrap .con ul li p {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>삼성중공업 주식회사</h1>
+      <p>[기준일 2024.12.31]</p>
+      <div class="con">
+        <ul>
+          <li>
+            <p class="tit">대표이사</p>
+            <p class="txt">최성안</p>
+          </li>
+          <li>
+            <p class="tit">창립일</p>
+            <p class="txt">1974년 8월 5일</p>
+          </li>
+          <li>
+            <p class="tit">종업원수</p>
+            <p class="txt">10,112명</p>
+          </li>
+          <li>
+            <p class="tit">자본금</p>
+            <p class="txt">8,801억</p>
+          </li>
+          <li>
+            <p class="tit">매출액</p>
+            <p class="txt">99,031억</p>
+          </li>
+          <li>
+            <p class="tit">총자산</p>
+            <p class="txt">169,979억원</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
