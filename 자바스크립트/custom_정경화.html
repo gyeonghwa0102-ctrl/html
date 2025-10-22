@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .con {
+        width: 100%;
+        max-width: 1520px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .con h1 {
+        font-family: "Pretendard";
+        font-size: 38px;
+        margin-bottom: 100px;
+        text-align: center;
+      }
+      .con .boxes {
+        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .con .boxes .box {
+        width: 478px;
+        height: 220px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 48px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .con .boxes .box {
+        font-family: "Pretendard";
+        position: relative;
+      }
+      .con .boxes .box > p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 60px;
+      }
+      .con .boxes .box div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      .con .boxes .box div a {
+        color: #ccc;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      .con .boxes .box div p img {
+        width: 100%;
+      }
+      .con .boxes .box > p > img {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+      }
+      @media screen and (max-width: 1500px) {
+        .con .boxes .box {
+          width: 400px;
+        }
+      }
+      @media screen and (max-width: 1259px) {
+        .con h1 {
+          font-size: 36px;
+        }
+        .con .boxes .box {
+          width: 385px;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        .con .boxes .box {
+          width: 320px;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .con .boxes .box {
+          width: 306px;
+        }
+      }
+      @media screen and (max-width: 980px) {
+        .con h1 {
+          font-size: 30px;
+        }
+        .con .boxes .box {
+          width: 278px;
+        }
+      }
+      @media screen and (max-width: 910px) {
+        .con .boxes .box {
+          width: 243px;
+          padding: 20px;
+        }
+        .con .boxes .box > p {
+          font-size: 20px;
+        }
+        .con .boxes .box div a {
+          font-size: 13px;
+        }
+      }
+      @media screen and (max-width: 780px) {
+        .con .boxes .box {
+          width: 232px;
+          padding: 20px;
+        }
+      }
+      @media screen and (max-width: 765px) {
+        .con h1 {
+          font-size: 24px;
+        }
+        .con .boxes .box {
+          width: 732px;
+          height: 120px;
+          padding: 15px;
+        }
+        .con .boxes .box > p {
+          margin-bottom: 30px;
+        }
+        .con .boxes .box > p > img {
+          top: 10%;
+          right: 5%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <h1>고객마당</h1>
+      <div class="boxes">
+        <div class="box">
+          <p>열요금정보</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard01.svg"
+              alt=""
+            />
+          </p>
+        </div>
+        <div class="box">
+          <p>설비정비</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard02.svg"
+              alt=""
+            />
+          </p>
+        </div>
+        <div class="box">
+          <p>교육정보</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard03.svg"
+              alt=""
+            />
+          </p>
+        </div>
+        <div class="box">
+          <p>세대정보</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard04.svg"
+              alt=""
+            />
+          </p>
+        </div>
+        <div class="box">
+          <p>자료실</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard05.svg"
+              alt=""
+            />
+          </p>
+        </div>
+        <div class="box">
+          <p>공지사항</p>
+          <div>
+            <a href="#">view more</a>
+            <p>
+              <img
+                src="https://www.gspower.co.kr/pub/images/arrow_yard.svg"
+                alt=""
+              />
+            </p>
+          </div>
+          <p>
+            <img
+              src="https://www.gspower.co.kr/pub/images/icon_customer_yard06.svg"
+              alt=""
+            />
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
