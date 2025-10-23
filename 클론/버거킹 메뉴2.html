@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 서브메뉴 안내려옴, 메뉴글자 후버시 색변화 없음 */
+      @font-face {
+        font-family: "BKBulMatPro";
+        src: url(./BKBulMatPro-Bold.woff);
+      }
+      @font-face {
+        font-family: "SDGothic";
+        src: url(./SDGothicNeoRound-hEb.otf);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        padding: 0 150px 70px;
+        max-width: 1670px;
+        margin: 0 auto;
+      }
+      .top {
+        width: 100%;
+        height: 98px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #f5ebdc;
+      }
+      .top .menu {
+        position: relative;
+        overflow: hidden;
+      }
+      .top .menu > ul {
+        display: flex;
+        gap: 20px;
+        font-family: "BKBulMatPro";
+        text-transform: uppercase;
+      }
+      .top .menu > ul > li > a {
+        font-size: 24px;
+        color: #502314;
+      }
+      .top .menu > ul > li .sub {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background: #502314;
+        border-radius: 30px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-family: "SDGothic";
+        font-style: 20px;
+        z-index: 1;
+      }
+      .top .menu > ul > li .sub li {
+        color: #fff;
+      }
+      .top .menu > li:hover .sub {
+        height: 300px;
+      }
+      .top .menu > li:hover .sub > li > a {
+        color: #d62300;
+      }
+      .top .right {
+        display: flex;
+        align-items: center;
+        background: #5023140d;
+        border-radius: 20px;
+        padding: 5px 13px;
+        box-sizing: border-box;
+        gap: 5px;
+      }
+      .top .right > p > a {
+        font-family: "SDGothic";
+        font-size: 13px;
+        color: #502314;
+        line-height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <a href="#"
+          ><img src="https://www.burgerking.co.kr/img/bg_logo.svg" alt=""
+        /></a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">menu</a></li>
+          <li>
+            <a href="#">story</a>
+            <ul class="sub">
+              <li>브랜드</li>
+              <li>Why 버거킹</li>
+              <li>ESG 경영</li>
+              <li>Smart QSR</li>
+              <li>수상실적</li>
+              <li>광고영상</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">news</a>
+            <!-- <ul class="sub">
+              <li>이벤트</li>
+              <li>공지사항</li>
+            </ul> -->
+          </li>
+          <li><a href="#">store</a></li>
+          <li><a href="#">customer</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <p>
+          <img
+            src="https://www.burgerking.co.kr/img/ico_tit_store.svg"
+            alt=""
+          />
+        </p>
+        <p><a href="#">가맹점 모집</a></p>
+      </div>
+    </div>
+  </body>
+</html>
