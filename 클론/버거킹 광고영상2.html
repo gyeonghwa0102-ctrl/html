@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      @font-face {
+      font-family: "BKBulMatPro";
+      src: url(./BKBulMatPro-Bold.woff);
+    }
+    @font-face {
+      font-family: "SDGothic";
+      src: url(./SDGothicNeoRound-hEb.otf);
+    }
       * {
         margin: 0;
         padding: 0;
@@ -17,90 +25,52 @@
         color: #333;
       }
       body {
-        background-color: #f5ebdc;
-        padding: 0 60px;
+      background-color: #f5ebdc;
+      padding: 0 150px 70px;
+      width: 100%;
+      max-width: 1670px;
+      margin: 0 auto;
+      font-family: "BKBulMatPro";
+      color: #502314;
       }
       .ad {
-        width: 100%;
-        max-width: 1780px;
-        margin: 0 auto;
-        padding: 0 30px;
         padding-bottom: 26px;
+        margin-top: 60px;
       }
       .ad h1 {
         font-size: 42px;
       }
       .ad ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 20px;
         align-items: center;
         flex-wrap: wrap;
-      }
+        
+        } 
       .ad ul > li > a > img {
         width: 526px;
         height: 297px;
         object-fit: cover;
-        border-radius: 30px;
-        position: relative;
-      }
-      .ad ul > li .btn {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        background-image: url(https://www.burgerking.co.kr/img/btn_play.svg);
+        border-radius: 20px;
+        
       }
       .ad ul > li > p {
         text-align: center;
         font-size: 22px;
         padding: 20px;
+        font-family:  "SDGothic";
       }
-      .itro {
-        width: 100%;
-        max-width: 1780px;
-        margin: 0 auto;
-        padding: 0 30px;
+      .ad ul > li{
+        position: relative;
+        }
+      .ad ul > li .btn {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
       }
-      .itro h1{
-        font-size: 42px;
-        margin-bottom: 24px;
-      }
-      .itro .box {
-        background-color: #fff;
-        border-radius: 30px;
-        width: 526px;
-        height: 508px;
-        overflow: hidden;
-      }
-      .itro .box .txt{
-        padding: 20px;
-      }
-      .itro .box .txt >p:first-child{
-        background-color: #f5ebdc;
-        width: 60px;
-        text-align: center;
-        padding: 10px 16px;
-        border-radius: 10px;
-        font-size: 13px;
-      }
-      .itro .box .txt p:nth-child(2){
-        margin: 15px;
-        font-size: 22px;
-      }
-      
-      .itro .box .txt .btn{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-      }
-      .itro .box .txt .btn p{
-        font-size: 20px;
-      }
-      .itro .box .txt .btn p img{
-        height: 34px;
-        
-      }
+
     </style>
   </head>
   <body>
@@ -114,7 +84,9 @@
               alt=""
           /></a>
           <p>할라피뇨 파퍼 - 1편</p>
-          <div class="btn"></div>
+          <p class="btn">
+            <img src="https://www.burgerking.co.kr/img/btn_play.svg" alt="">
+          </p>
         </li>
         <li>
           <a href="#"
@@ -123,6 +95,9 @@
               alt=""
           /></a>
           <p>할라피뇨 파퍼 - 2편</p>
+          <p class="btn">
+            <img src="https://www.burgerking.co.kr/img/btn_play.svg" alt="">
+          </p>
         </li>
         <li>
           <a href="#"
@@ -131,62 +106,11 @@
               alt=""
           /></a>
           <p>25년 6월 오리지널스 출시</p>
+          <p class="btn">
+            <img src="https://www.burgerking.co.kr/img/btn_play.svg" alt="">
+          </p>
         </li>
       </ul>
-    </div>
-    <div class="itro">
-      <h1>메뉴와 매장소개, Why 버거킹</h1>
-      <div class="box">
-        <div class="txt">
-          <p>메뉴소개</p>
-          <p>버거킹만이 드릴 수 있는 특별한 맛을 소개합니다</p>
-          <div class="btn">
-            <p>메뉴 둘러보기</p>
-            <p><img src="	https://www.burgerking.co.kr/img/ico_move.svg" alt="">
-          </div>
-          </p>
-        </div>
-        <p>
-          <img
-            src="https://mob-prd.burgerking.co.kr/images/story/main/2025/01/20/fb8997c7-170d-484c-a48b-fc5e1abe97ba.png"
-            alt="1"
-          />
-        </p>
-      </div>
-      <div class="box">
-        <div class="txt">
-          <p>메뉴소개</p>
-          <p>버거킹만이 드릴 수 있는 특별한 맛을 소개합니다</p>
-          <div class="btn">
-            <p>메뉴 둘러보기</p>
-            <p><img src="	https://www.burgerking.co.kr/img/ico_move.svg" alt="">
-          </div>
-          </p>
-        </div>
-        <p>
-          <img
-            src="https://mob-prd.burgerking.co.kr/images/story/main/2025/01/20/fb8997c7-170d-484c-a48b-fc5e1abe97ba.png"
-            alt="1"
-          />
-        </p>
-        </div>
-      <div class="box">
-        <div class="txt">
-          <p>메뉴소개</p>
-          <p>버거킹만이 드릴 수 있는 특별한 맛을 소개합니다</p>
-          <div class="btn">
-            <p>메뉴 둘러보기</p>
-            <p><img src="	https://www.burgerking.co.kr/img/ico_move.svg" alt="">
-          </div>
-          </p>
-        </div>
-        <p>
-          <img
-            src="https://mob-prd.burgerking.co.kr/images/story/main/2025/01/20/fb8997c7-170d-484c-a48b-fc5e1abe97ba.png"
-            alt="1"
-          />
-        </p>
-        </div>
     </div>
     </div>
   </body>
