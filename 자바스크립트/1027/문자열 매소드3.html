@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .con li .on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li><a href="#">photo1</a></li>
+      <li><a href="#">photo2</a></li>
+      <li><a href="#">photo3</a></li>
+      <li><a href="#">photo4</a></li>
+    </ul>
+    <p class="con"><img src="./photo1.jpg" alt="" /></p>
+
+    <script>
+      let btn = document.querySelectorAll(".btn li");
+      btn[0].classList.add("on");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function (e) {
+          e.preventDefault();
+          document.querySelector(".con img").src =
+            "./photo1/jpg" + (k + 1) + ".jpg";
+          // let imgSrc = document.querySelector(".con img").src;
+          // console.log(src);
+          // imgSrc.replace(imgSre(slice(-5, -4), 2));
+        };
+      });
+    </script>
+  </body>
+</html>
