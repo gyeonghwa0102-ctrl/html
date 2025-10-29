@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+      }
+      div h2 {
+        font-size: 24px;
+      }
+      div h2 span {
+        background: #eee;
+        border-radius: 50%;
+      }
+      div .btn {
+        position: absolute;
+        left: 60%;
+        top: 30%;
+        transition: 0.5s;
+      }
+      div .btn.on {
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2>ICT 마케팅 <span>→</span></h2>
+      <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+      <div class="btn">
+        <p>자세히 보기 <span>∨</span></p>
+      </div>
+      <div class="con">
+        <div>
+          <p>사업 영역</p>
+          <p>휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통</p>
+        </div>
+        <div>
+          <p>FY2024 매출액</p>
+          <p4조 2,759억 원></p4조>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>ICT 마케팅 <span>→</span></h2>
+      <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+      <div class="con">
+        <div>
+          <p>사업 영역</p>
+          <p>휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통</p>
+        </div>
+        <div>
+          <p>FY2024 매출액</p>
+          <p4조 2,759억 원></p4조>
+        </div>
+      </div>
+      <div>
+        <h2>ICT 마케팅 <span>→</span></h2>
+        <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+        <div class="con">
+          <div>
+            <p>사업 영역</p>
+            <p>
+              휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p>FY2024 매출액</p>
+          <p4조 2,759억 원></p4조>
+        </div>
+      </div>
+    </div>
+    <script>
+      let btn = document.querySelectorAll("div .btn");
+      function skWorks() {
+        this.querySelector("div .btn");
+      }
+    </script>
+  </body>
+</html>
