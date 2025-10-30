@@ -32,76 +32,85 @@
         width: 100%;
         max-width: 1620px;
         margin: 0 auto;
-        padding: 0 60px;
+        padding: 0 3.75rem;
         color:#502314;
       background-color: #f5ebdc}
 
-        .top {
+      .top {
         width: 100%;
-        height: 98px;
+        height: 6.125rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: #f5ebdc;
+        padding: 0 1.875rem;
+        box-sizing: border-box;
       }
       .top .menu {
         position: relative;
       }
       .top .menu > ul {
         display: flex;
-        gap: 20px;
+        gap: 1.25rem;
         font-family: "BKBulMatPro";
         text-transform: uppercase;
       }
       .top .menu > ul > li > a {
-        font-size: 24px;
+        font-size:1.5rem;
         color: #502314;
       }
       .top .menu > ul > li .sub {
         width: 100%;
-        height: 60px;
+        height: 1.875rem;
         transform: scaleY(0);
-        transition: 0.1s;
+        transition: 0.5s;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: space-around;
         position: absolute;
-        top: 50px;
+        top: 2.5rem;
         left: 0;
         background: #502314;
-        border-radius: 30px;
+        border-radius: 1.875rem;
+        padding: 0 0.625rem;
+        box-sizing: border-box;
         font-family: "SDGothic";
       }
       .top .menu > ul > li .sub > li > a {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .top .menu > ul > li:hover .sub {
+        transform: scaleY(1);
+      }
+      .top .menu > ul > li:nth-child(3):hover .sub {
+        position: absolute;
+        width: 30%;
+        left: 30%;
+      }
+      .top .menu > ul > li .sub > li:hover > a {
         color: #fff;
-      }
-      .top .menu > ul > li:nth-child(2):hover .sub:nth-child(2) {
-        transform: scaleY(1);
-      }
-      .top .menu > ul > li:nth-child(3):hover .sub:nth-child(3) {
-        transform: scaleY(1);
       }
       .top .right {
         display: flex;
         align-items: center;
         background: #5023140d;
-        border-radius: 20px;
-        padding: 5px 13px;
+        border-radius: 1.25rem;
+        padding: 0.313rem 0.813rem;
         box-sizing: border-box;
-        gap: 5px;
+        gap: 0.313rem;
       }
       .top .right > p > a {
         font-family: "SDGothic";
-        font-size: 13px;
+        font-size: 0.813rem;
         color: #502314;
-        line-height: 30px;
+        line-height: 1.875rem;
       }
       main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 20px;
+        gap: 1.25rem;
         font-family: "BKBulMatPro";
       }
       main .first{
@@ -111,21 +120,21 @@
       }
       main .first img{
         width: 100%;
-        height: 100%;
         object-fit: cover;
-        border-radius:20px;
+        border-radius:1.25rem;
       }
       main .sec{
         grid-column: 3;
         grid-row: 1;
         background-color: #fff;
-        border-radius:20px;
-        padding: 30px;
+        border-radius:1.25rem;
+        padding: 1.875rem;
         box-sizing: border-box;
+        
       }
       main .sec h1 {
         color: #502314;
-        font-size: 30px;
+        font-size: 1.875rem;
         text-align: center;
       }
       main .sec .coupon {
@@ -140,24 +149,25 @@
       }
       main .sec .coupon .down >p{
         background: #f5ebdc;
-        border-radius: 50px;
-        width: 150px;
-        height: 42px;
+        border-radius: 3.125rem;
+        width: 9.375rem;
+        height: 2.625rem;
         text-align: center;
-        padding-top: 8px;
+        padding-top: 0.5rem;
         box-sizing: border-box;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
       }
       main .trd{
         grid-column: 3;
         grid-row: 2;
         background-color: #502314;
-        border-radius:20px;
-        height: 98%;
+        border-radius:1.25rem;
+        height: 94%;
       }
       main .trd p{
+        
         color: #fff;
-        font-size: 30px;
+        font-size: 1.875rem;
         text-align: center;
         padding-top: 5%;
       }
@@ -169,16 +179,16 @@
       .ad{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        gap: 1.25rem;
         font-family: "SDGothic";
-        padding-bottom: 30px;
+        padding-bottom: 1.875rem;
         box-sizing: border-box;
 
         }
        h1 {
-        font-size: 42px;
+        font-size:2.625rem;
         font-family: "BKBulMatPro";
-        margin: 30px 0;
+        margin: 1.875rem 0;
       }
       
       .ad div:first-child{
@@ -198,13 +208,13 @@
       }
       .ad div p{
         text-align: center;
-        font-size: 22px;
+        font-size: 1.375rem;
         font-family:  "SDGothic";
       }
       .ad div p>a> img{
         width: 100%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 1.25rem;
       }
       .ad div .btn {
         position: absolute;
@@ -215,13 +225,13 @@
       .intro{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
+        gap: 1.25rem;
       }
       .intro .box{
         width: 100%;
-        height: 94%;
+        height: 100%;
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         box-sizing: border-box;
         overflow: hidden;
         
@@ -233,63 +243,63 @@
         width: 100%;
         object-fit: cover;
         position: relative;
-        top: 40px;
+        top: 2.5rem;
       }
       .intro .box:nth-child(2)>p>img{
         position: relative;
-        top: 15px;
+        top: 0.938rem;
       }
       .intro .box .txt{
         font-family:  "SDGothic";
-        padding: 20px;
+        padding: 1.25rem;
         box-sizing: border-box;
       }
       .intro .box .txt> p:first-child{
         background-color: #f5ebdc;
-        width: 60px;
-        padding: 10px 16px;
+        width: 3.75rem;
+        padding: 0.625rem 1rem;
         text-align: center;
-        border-radius: 10px;
-        font-size: 13px;
+        border-radius: 0.625rem;
+        font-size: 0.813rem;
       }
       .intro .box .txt >p:nth-child(2){
-        margin: 15px;
-        font-size: 22px;
+        margin: 0.938rem;
+        font-size: 1.375rem;
       }
       .intro .box .txt .btn{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 10px;
+        gap: 0.625rem;
       }
       .intro .box .txt .btn p{
-        font-size: 17px;
+        font-size: 1.063rem;
       }
       .deli{
-        margin: 30px 0;
+        margin: 1.875rem 0;
         background-color: #502314;
         width: 100%;
-        height: 162px;
-        border-radius: 20px;
+        height: 10.125rem;
+        border-radius: 1.25rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 100px;
+        gap: 6.25rem;
         font-family: "BKBulMatPro";
       }
       .deli .txt{
         color: #fff;
       }
       .deli .txt h1{
-        font-size: 35px;
-        margin: 10px 0 ;
+        font-size: 2.188rem;
+        margin: 0.625rem 0 ;
       }
       .deli .txt .order{
-        font-size: 18px;
+        font-size: 1.125rem;
         font-family:  "SDGothic";
       }
       .deli .txt .def{
-        font-size: 16px;
+        font-size: 1rem;
         font-family:  "SDGothic";
       }
       .deli .number{
@@ -297,37 +307,37 @@
         align-items: center;
       }
       .deli .number .num{
-        font-size: 60px;
+        font-size: 1rem;
         color: #fa0;
       }
       .cus{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 20px;
+        gap: 1.25rem;
         font-family: "SDGothic";
       }
       .cus .one{
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         width: 100%;
-        height: 100;
-        padding: 20px;
+        height: 100%;
+        padding: 1.25rem;
         box-sizing: border-box;
         
       }
       .cus >div span{
         display: inline-block;
-        width: 60px;
+        width: 3.75rem;
         background-color: #f5ebdc;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         text-align: center;
-        padding: 10px 16px;
-        font-size: 13px;
-        margin-bottom: 18px;
+        padding: 0.625rem 1rem;
+        font-size: 0.813rem;
+        margin-bottom: 1.125rem;
       }
       .cus >div h3{
-        font-size: 22px;
+        font-size: 1.375rem;
       }
       .cus >div:nth-child(1){
         grid-column: 1;
@@ -348,20 +358,20 @@
       }
       .cus .img {
         background-color: #fff;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         width: 100%;
         
         overflow: hidden;
       }
       .cus .img .txt{
-        padding: 20px;
+        padding: 1.25rem;
         box-sizing: border-box;
       }
       .cus >div>p>img{
         width: 100%;
         object-fit: cover;
         position: relative;
-        top: 40px;
+        top: 2.5rem;
       }
       .bottom {
         display: flex;
@@ -369,10 +379,10 @@
         justify-content: center;
         align-items: center;
         background-color: #d4c3b4;
-        border-radius: 20px;
-        margin-top: 30px;
+        border-radius: 1.25rem;
+        margin-top: 1.875rem;
         font-family: "SDGothic";
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
       }
       .bottom >p{
         width: 30%;
@@ -383,12 +393,12 @@
         
       }
       .bottom .app{
-        padding: 0 30px;
+        padding: 0 3.125rem;
       }
       .bottom .app h2{
-        font-size: 30px;
-        padding-top: 30px;
-        margin-bottom: 24px;
+        font-size: 1.875rem;
+        padding-top: 1.875rem;
+        margin-bottom: 1.5rem;
       }
       .bottom .app .order{
         display: flex;
@@ -396,45 +406,45 @@
       }
       .bottom .app .order li a{
         color: #fff;
-        font-size: 19px;
+        font-size: 1.188rem;
         display: inline-block;
         background-color: #502314;
-        border-radius: 10px;
-        height: 37px;
-        padding: 6px 16px 4px 16px;
-        margin-right: 8px;
+        border-radius: 0.625rem;
+        height: 2.313rem;
+        padding: 0.5rem 1rem 0.25rem 1rem;
+        margin-right: 0.5rem;
         box-sizing: border-box;
         text-align: center;
       }
       .bottom .app .down {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 48px;
-        gap: 20px;
+        margin-top: 3rem;
+        gap: 1.25rem;
       }
       .bottom .app .down li >p img{
-        width: 160px;
+        width: 10rem;
         
       }
       .bottom .app .down li >p:last-child{
-        margin-top: 10px;
+        margin-top: 0.625rem;
       }
       footer {
         width: 100%;
-        height: 216px;
+        height: 13.5rem;
         background-color: #fffcf8;
-        padding: 40px 60px;
+        padding: 2.5rem 3.75rem;
         box-sizing: border-box;
         font-family:  "SDGothic";
       }
       footer .use {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 20px;
-        padding-left: 210px;
+        margin-bottom: 1.25rem;
+        padding-left: 13.125rem;
       }
       footer .use li a {
-        font-size: 12px;
+        font-size: 0.75rem;
         color: #856559;
       }
       footer .use li:nth-child(2) a {
@@ -447,9 +457,9 @@
         justify-content: space-around;
         align-items: center;
         background-color: #5023140d;
-        width: 106px;
-        border-radius: 20px;
-        padding: 8px 12px;
+        width: 6.625rem;
+        border-radius: 1.25rem;
+        padding: 0.5rem 0.75rem;
         box-sizing: border-box;
       }
       footer .fbottom {
@@ -457,77 +467,190 @@
         justify-content: space-between;
         align-items: center;
       }
-      footer .fbottom .right {
+      footer .fbottom .left {
         display: flex;
-        gap: 20px;
-        font-size: 12px;
-        line-height: 20px;
+        gap: 1.25rem;
+        font-size: 0.75rem;
+        line-height: 1.25rem;
         color: #856559;
       }
-      footer .fbottom .right ul li:nth-child(2) a {
+      footer .fbottom .left ul li:nth-child(2) a {
         text-decoration: underline;
         color: #502314b3;
         font-weight: bold;
       }
-      footer .fbottom .left {
+      footer .fbottom .right {
         display: flex;
-        margin: 25px 0;
+        margin: 1.563rem 0;
       }
-      footer .fbottom .left p img {
-        margin-left: 20px;
+      footer .fbottom .right p img {
+        margin-left: 1.25rem;
       }
-      footer .fbottom .left .sns {
+      footer .fbottom .right .sns {
         display: flex;
       }
-      footer .fbottom .left .sns::after {
+      footer .fbottom .right .sns::after {
         content: "";
         background-color: #d4c8b7;
-        width: 1px;
-        height: 20px;
-        margin: 5px 15px;
+        width: 0.063rem;
+        height: 1.25rem;
+        margin: 0.313rem 0.938rem;
       }
-      footer .fbottom .left .sns img {
-        width: 32px;
-        margin-left: 20px;
+      footer .fbottom .right .sns img {
+        width: 2rem;
+        margin-left: 1.25rem;
       }
       @media screen and (max-width:1024px) {
         body{
           background-color: #fffcf8;
         }
+        main .first{
+          height: 100%;
+        }
         main .first img{
-        height: 548px;
-      object-fit: cover;}
+        height: 550px;
+        }
         main .sec{
         padding: 20px;
-        box-sizing: border-box;}
+        box-sizing: border-box; }
+       
+
          main .sec h1 {
         font-size: 22px;
       }
+       main .trd{
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+       }
       main .trd p{
         font-size: 22px;
       }
        main .trd img {
-         width: 70%;}
+         width: 100%;}
       }
       @media screen and (max-width:640px){
+        .top{
+          padding: 0;
+        }
+        .top .menu{
+          display: none;
+        }
+        .top .right{
+          display: none;
+        }
+        main{
+          grid-template-columns: 1fr 1fr;
+        }
         main .first{
         grid-column: 1/3;  
       }
-       main .first>img{
-        width: 580px;
+       main .first div>img{
+        width: 100%;
+        height: 256px;
+        
        }
       main .sec{
-        grid-column: 1;
+        grid-column: 1/2;
         grid-row: 2;
+        width: 297px;
+      }
+      main .sec .coupon>p>img{
+        display: none;
       }
       main .trd{
         grid-column: 2 / 3;
         grid-row: 2;
-      }}
+        width: 297px;
+      }
+      .ad{
+        display: grid;
+        grid-template-columns: 1fr;}
+      .ad div:first-child{
+        grid-column: 1;
+      }  
+      .ad div:nth-child(2){
+        display: none;
+
+      }
+      .ad div:last-child{
+       display: none;}
+      .intro{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .intro .box:nth-child(3){
+        grid-column: 1/3;
+        grid-row: 2;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .deli{
+        gap: 10px;
+        
+      }
+      .deli .txt h1{
+        font-size: 30px;
+      }
+      .deli .txt .order{
+        font-size: 15px;
+      }
+      .deli .txt .def{
+        font-size: 13px;
+      }
+      .deli .number p>img{
+        width: 70%;
+      }
+      .deli .number .num{
+        font-size: 35px;
+      }
+      .cus{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+       
+      }
+      .cus >div:nth-child(1){
+        grid-column: 1;
+        grid-row: 1;
+      }
+       .cus >div:nth-child(2){
+        grid-column: 2;
+        grid-row: 1;
+      }
+       .cus >div:nth-child(3){
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .cus >div:nth-child(4){
+         grid-column: 2;
+         grid-row: 2;
+      }
+      .bottom {
+        display: none;
+      }
+      footer{
+        width: 800px;
+        margin: 0 auto;
+        padding: 40px 60px;
+        box-sizing: border-box;
+        height: 50%;
+      }
+      footer .use{
+        padding-left: 0;
+      }
+      footer .left p img{
+        height: 15px;
+        
+      }
+      footer .left{
+        flex-direction: column;
+      }
+      }
 </style>
   </head>
   <body>
-
     <div class="wrap">
       <div class="top">
       <div class="logo">
@@ -552,8 +675,8 @@
           <li>
             <a href="#">news</a>
             <ul class="sub">
-              <li>이벤트</li>
-              <li>공지사항</li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">공지사항</a></li>
             </ul>
           </li>
           <li><a href="#">store</a></li>
@@ -574,7 +697,7 @@
         <div class="first">
           <div>
             <img
-              src="https://mob-prd.burgerking.co.kr/images/event/web/list/2025/05/15/a7086366-46f6-426b-b9c9-eb8b591e9499.jpg"
+              src="https://mob-prd.burgerking.co.kr/images/event/web/list/2025/01/21/b961bbf9-88a6-4539-84dc-f04083a0f941.png"
               alt=""
             />
          </div>
@@ -802,7 +925,7 @@
         </li>
       </ul>
       <div class="fbottom">
-        <div class="right">
+        <div class="left">
           <p>
             <img
               src="https://www.burgerking.co.kr/img/bg_logo_b.svg"
@@ -819,7 +942,7 @@
             <li>ⓒBKR Co., Ltd. All right Reserved</li>
           </ul>
         </div>
-        <div class="left">
+        <div class="right">
           <ul class="sns">
             <li>
               <a href="#"

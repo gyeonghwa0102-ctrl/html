@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복숫자, 짝수, 홀수</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        //for(변수선언 초기값 할당; 조건; 증감) i++ ,i= i+1, i+=1
+        document.write(`${i},`);
+      }
+      document.write(`<br>`);
+      for (let i = 1; i <= 100; i++) {
+        document.write(`${i},`);
+      }
+      document.write(`<br>`);
+      for (let i = 0; i <= 100; i += 2) {
+        document.write(`${i},`);
+      }
+      document.write(`<br>`);
+      for (let i = 1; i <= 100; i++) {
+        if (1 % 2 == 0) {
+          document.write(`${i},`);
+        }
+      }
+      document.write(`<br>`);
+      let sum = 0;
+      for (let i = 1; i <= 100; i++) {
+        //sum = sum + i;
+        sum += i;
+      }
+      document.write(`1부터 100까지 합계:${sum}<br>`);
+
+      document.write(`<br>`);
+      let even = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (1 % 2 == 0) {
+          even += i;
+        }
+      }
+      document.write(`1부터 100까지 짝수의 합계:${even}<br>`);
+
+      document.write(`<br>`);
+      let odd = 0;
+      for (let i = 1; i <= 100; i++) {
+        if (1 % 2 == 1) {
+          odd += i;
+        }
+      }
+      document.write(`1부터 100까지 홀수의 합계:${odd}<br>`);
+
+      document.write(`<br>`);
+      for (let i = 100; i >= 1; i--) {
+        document.write(`${i},`);
+      }
+
+      document.write(`<br>`);
+      let str = "<ul>";
+      for (let i = 1; i <= 10; i++) {
+        str += `<li><a href="#">링크${i}</a><li>`;
+      }
+      str += "</ul>";
+      document.write(str);
+    </script>
+  </body>
+</html>
