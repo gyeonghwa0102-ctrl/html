@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul{
+        list-style: none;
+      }
+      a{
+        text-decoration: none;
+        color: #333;
+      }
+      .con {
+        width: 1900px;
+        margin-top: 300px;
+        margin-bottom: 70px;
+        height: 300px;
+        overflow: hidden;
+      }
+      .con p:first-child {
+        position: relative;
+        background-image: url(./business01.png);
+        background-position: center;
+      }
+      .con p:first-child {
+        width: 100%;
+        object-fit: cover;
+      }
+      .con p:nth-child(2) {
+        width: 683px;
+        position: absolute;
+        top: 11%;
+        left: 52.3%;
+      }
+      .btn{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .btn li{
+        border: 1px solid;
+        width: 178px;
+        height: 52px;
+        padding-top: 15px;
+        box-sizing: border-box;
+      }
+      .btn li.on{
+        background-color: #1b2e59;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="space">
+      <div class="con">
+        <p><img src="./business_daelim2.png" alt="" /></p>
+        <p><img src="./business_img01.png" alt="" /></p>
+      </div>
+      <ul class="btn">
+        <li><a href="#">트레이닝</a></ㅣ>
+        <li><a href="#">PI</a></li>
+        <li><a href="#">물류</a></li>
+        <li><a href="#">탱크컨테이너</a></li>
+        <li><a href="#">건설정보화</a></li>
+        <li><a href="#">IT 서비스</a></li>
+        <li><a href="#">투자</a></li>
+      </div>
+    </div>
+    <script>
+      let btn=document.querySelectorAll(".btn li")
+      let con=document.querySelectorAll(".con")
+      btn[0].querySelector("a").classList.add("on")
+      btn.forEach(function(v, k, ar){
+        v.onclick=function(e){
+          e.preventDefault();
+          ar.forEach(function(v){
+            v.querySelector("a").classList.remove("on")
+          });
+        }});
+        this.querySelector("a").classList.add("on")
+      
+    </script>
+  </body>
+</html>
