@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //웹페이지 로딩시점에 관련된 이벤트
+      //load, onload 문서를 모드 로드한 후 실행 (이미지, css,iframe) 전부 로드한 후 실행
+      // onload는 한번자리 로드처리
+      window.onload = function () {
+        console.log("onload");
+      };
+      window.addEventListener("load", function () {
+        console.log("load");
+      });
+      //html문서의 dom구조만 파싱(이미지, css,javascript 로드되기 전에 실행)
+      window.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+      });
+    </script>
+  </body>
+</html>
