@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {margin: 0; padding: 0; overflow: hidden;}
+  body {background: black;}
+  video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    object-fit: cover;
+    transition: opacity 0.6s ease-in-out;
+  }
+</style>
+</head>
+<body>
+  <body>
+  <video id="videoA" autoplay muted playsinline></video>
+  <video id="videoB" muted playsinline style="opacity:0;"></video>
+
+<script>
+const videos = {
+  intro: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_1_intro.mp4",
+  loop2: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_2_loop.mp4",
+  v3: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_3.mp4",
+  loop4: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_4_loop.mp4",
+  v5: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_5.mp4",
+  loop6: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_6_loop.mp4",
+  R2: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_2.mp4",
+  R3: "https://d29wx3mrk1ysd0.cloudfront.net/video/PC_main_render_R_3.mp4",
+};
+
+const orderDown = [
+  ['intro','loop2'],
+  ['v3','loop4'],
+  ['v5','loop6'],
+];
+const orderUp = [
+  ['R3','loop4'],
+  ['R2','loop2'],
+];
+
+let currentIndex = 0;
+let direction = 'down';
+let activeVideo = 'A';
+
+const videoA = document.getElementById('videoA');
+const videoB = document.getElementById('videoB');
+
+// 초기 세팅
+videoA.src = videos.intro;
+videoA.onended = () => switchTo(videos.loop2);
+
+function switchTo(src) {
+  const current = activeVideo === 'A' ? videoA : videoB;
+  const next = activeVideo === 'A' ? videoB : videoA;
+
+  next.src = src;
+  next.currentTime = 0;
+  next.play();
+
+  // 페이드 전환
+  next.style.opacity = 1;
+  current.style.opacity = 0;
+  activeVideo = activeVideo === 'A' ? 'B' : 'A';
+}
+
+// 스크롤 이벤트
+window.addEventListener('wheel', e => {
+  if (e.deltaY > 0) { // 휠 내리기
+    if (currentIndex < orderDown.length - 1) {
+      currentIndex++;
+      const [main, loop] = orderDown[currentIndex];
+      switchTo(videos[main]);
+      setTimeout(() => switchTo(videos[loop]), 500); // 자연스러운 전환
+    }
+  } else { // 휠 올리기
+    if (currentIndex > 0) {
+      currentIndex--;
+      const [main, loop] = orderUp[Math.max(0, currentIndex)];
+      switchTo(videos[main]);
+      setTimeout(() => switchTo(videos[loop]), 500);
+    }
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      @font-face {
+        font-family: "NotoSansKR";
+        src: url(../webfont/NotoSansKR-VariableFont_wght.woff)
+          format("truetype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+      body {
+        width: 100vw;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%;
+        height: 100%; */
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 1324px;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide .main1,
+      .swiper-slide .main2,
+      .swiper-slide .main3 {
+        width: 100%;
+        padding: 150px 90px;
+        box-sizing: border-box;
+      }
+      .swiper-slide .main1 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+      }
+      .swiper-slide .main2 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
+      }
+      .swiper-slide .main3 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+      }
+      .swiper-slide .main1 div,
+      .swiper-slide .main2 div,
+      .swiper-slide .main3 div {
+        font-family: "NotoSansKR";
+        padding: 0px 0 80px 0;
+      }
+      .swiper-slide .main1 div h3 {
+        font-size: 30px;
+        color: #0066ff;
+      }
+      .swiper-slide .main1 div p {
+        font-size: 18px;
+        color: #777;
+      }
+      .swiper-slide .main2 div h3,
+      .swiper-slide .main3 div h3 {
+        font-size: 30px;
+        color: #fff;
+      }
+      .swiper-slide .main2 div p,
+      .swiper-slide .main3 div p {
+        font-size: 18px;
+        color: #fff;
+      }
+      .swiper-slide .main1 p:last-child img,
+      .swiper-slide .main2 p.con2 img,
+      .swiper-slide .main3 p.con2 img {
+        position: relative;
+        z-index: 1;
+      }
+      .swiper-slide .main2 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg2.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 100px auto;
+      }
+      .swiper-slide .main2 .btn a,
+      .swiper-slide .main3 .btn a {
+        font-family: "NotoSansKR";
+        font-size: 17px;
+        color: #fff;
+        line-height: 53px;
+      }
+      .swiper-slide .main3 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg3.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 50px auto;
+      }
+      p.water {
+        position: fixed;
+        left: 48%;
+        top: 30%;
+        transform: translate(-50px, -50px);
+      }
+      p.water img {
+        width: 213px;
+      }
+      .swiper-slide .bottom {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg4.jpg);
+        width: 100%;
+        min-height: 1280px;
+        padding: 330px 180px 90px;
+        box-sizing: border-box;
+        font-family: "NotoSansKR";
+      }
+      .swiper-slide .bottom .txt {
+        text-align: center;
+        color: #2d2d2d;
+      }
+      .swiper-slide .bottom .txt h1 {
+        line-height: 1.4;
+        font-size: 37px;
+        font-weight: 300;
+      }
+      .swiper-slide .bottom .txt h1 > span {
+        display: inline-block;
+        color: #0066ff;
+        font-weight: bold;
+      }
+      .swiper-slide .bottom .txt p {
+        margin-top: 15px;
+        font-size: 18px;
+      }
+      .swiper-slide .bottom .tit {
+        margin-top: 500px;
+        color: #fff;
+      }
+      .swiper-slide .bottom .tit h3 {
+        font-size: 33px;
+        margin-bottom: 25px;
+      }
+      .swiper-slide .bottom .tit > p {
+        font-size: 18px;
+        margin-bottom: 100px;
+      }
+      .swiper-slide .bottom .tit .sns > p > a {
+        color: #fff;
+        font-size: 20px;
+      }
+      .swiper-slide .bottom .tit .sns > p:nth-child(2) {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="main1">
+            <div>
+              <h3>THE WATER</h3>
+              <p>깨끗하고, 건강하고, 맛있는 물</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
+                  alt=""
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+                  alt=""
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="main2">
+            <div>
+              <h3>ONLY ONE</h3>
+              <p>진정한 제주다움 실현</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
+                  alt=""
+                />
+              </p>
+              <p class="con2">
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
+                  alt=""
+                />
+              </p>
+              <div class="btn"><a href="#">MORE +</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="main3">
+            <div>
+              <h3>SUSTAINABLE</h3>
+              <p>제주의 청정 자연과 공존하는 제주삼다수</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/ECO.png"
+                  alt=""
+                />
+              </p>
+              <p class="con2">
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/FRIENDLY.png"
+                  alt=""
+                />
+              </p>
+              <div class="btn"><a href="#">MORE +</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bottom">
+            <div class="txt">
+              <h1>
+                무려 106개의 관측망이 <br /><span>한 눈 팔지 않고</span> 지키는
+                물
+              </h1>
+              <p>
+                우리가 믿는 물, 제주삼다수 <br />앞으로도 늘 지금처럼 깨끗하고
+                맑을 것을 약속합니다.
+              </p>
+            </div>
+            <div class="tit">
+              <h3>MORE STORY</h3>
+              <p>
+                다수가 물든 이야기, <br />
+                앞으로도 우리와 함께할 제주삼다수 이야기
+              </p>
+              <div class="sns">
+                <p><a href="#">INSTAGRAM ></a></p>
+                <p><a href="#">YOUTUBE ></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

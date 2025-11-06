@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        width: 1210px;
+        margin: 0 auto;
+        font-family: "Archivo";
+      }
+      h4 {
+        font-size: 42px;
+        color: #d1a050;
+      }
+      h4:nth-child(1) {
+        padding-top: 100px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      h4:nth-child(2) {
+        margin-bottom: 20px;
+        font-weight: normal;
+      }
+      .list li hr {
+        background: #d1a050;
+        height: 1px;
+        border: 0;
+      }
+      .list li p {
+        font-size: 24px;
+        color: #d1a050;
+        font-family: "Archivo";
+        padding: 15px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .list li p img {
+        width: 100%;
+        object-fit: cover;
+        padding: 70px 40px 80px;
+        box-sizing: border-box;
+      }
+      .list li span {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .list li span.on {
+        transform: rotate(45deg);
+      }
+      .list li p:last-child {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>RETAIL</h4>
+    <h4>Slices - Oat Base</h4>
+    <ul class="list">
+      <li>
+        <hr />
+        <p><span>+</span>AMERICAN</p>
+        <p>
+          <img
+            src="	https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <hr />
+        <p><span>+</span>CHEDDAR</p>
+        <p>
+          <img
+            src="	https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <hr />
+        <p><span>+</span>PROVOLONE</p>
+        <p>
+          <img
+            src="	https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PROVOLONE-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+      <li>
+        <hr />
+        <p><span>+</span>PEPPER JACK</p>
+        <p>
+          <img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg"
+            alt=""
+          />
+        </p>
+      </li>
+    </ul>
+    <script>
+      let btn = document.querySelectorAll(".list li");
+      let plus = document.querySelectorAll("p span");
+      let detail = document.querySelectorAll("ul.list li p:nth-child(2)");
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          let ht =
+            this.getElementsByTagName("p")[1].querySelector("img").clientHeight;
+          console.log("ht : " + ht);
+          let showCon = this.querySelector("span").classList.contains("on");
+          console.log(showCon);
+          if (showCon) {
+            this.querySelector("span").classList.remove("on");
+            this.getElementsByTagName("p")[1].style.height = 0;
+          } else {
+            plus.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            detail.forEach(function (v) {
+              v.style.height = 0;
+            });
+            this.querySelector("span").classList.add("on");
+            this.getElementsByTagName("p")[1].style.height = ht + "px";
+          }
+        };
+      });
+    </script>
+  </body>
+</html>

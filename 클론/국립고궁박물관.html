@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "PyeongchangPeace";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2")
+          format("woff2");
+        font-weight: 300;
+        font-display: swap;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        width: 100%;
+        max-width: 1905px;
+        margin: 0 auto;
+        background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/main_background.jpg);
+      }
+      header ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 40px;
+        box-sizing: border-box;
+      }
+      header ul .logo > a > h1 {
+        font-family: "PyeongchangPeace";
+        font-weight: 300;
+        font-size: 1.6vw;
+        line-height: 1.2;
+        color: #000;
+      }
+      header ul .logo a > span {
+        display: block;
+        height: 0.9vw;
+        font-size: 0.75vw;
+        font-weight: 400;
+        text-align: justify;
+        text-transform: uppercase;
+        color: #5e5e5e;
+        font-family: "Montserrat";
+        letter-spacing: 0.1rem;
+      }
+      header ul .nav_btn {
+        position: relative;
+      }
+      header ul .nav_btn::before{
+content: "";
+position: absolute;
+width: 30px;
+height: 2px;
+top: 0;
+right: 0;
+background: #0e0e0e;
+      }
+      header ul .nav_btn span::before{
+content: "";
+position: absolute;
+width: 10px;
+height: 2px;
+top: 10px;
+right: 15px;
+background: #0e0e0e;
+      }
+      header ul .nav_btn span::after{
+content: "";
+position: absolute;
+width: 10px;
+height: 2px;
+top: 10px;
+right: 0;
+background: #0e0e0e;
+      }
+      header ul .nav_btn::after{
+content: "";
+position: absolute;
+width: 30px;
+height:2px;
+top: 20px;
+right: 0;
+background: #0e0e0e;
+      }
+      
+      main ul{
+        display: flex;
+        justify-content: center;
+        gap: 0.7vw;
+        padding: 2vw;
+        margin: 50px 0;
+        
+      }
+      main ul li{
+        background:  rgba(255, 255, 255, .25);
+        backdrop-filter: blur(10px);
+        padding: 1.3vw;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+      }
+       main ul li:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0.2vw solid transparent;
+        border-image:  linear-gradient(135deg, rgba(255, 254, 248, .8) 0%, rgba(155, 155, 155, .4) 20%, rgba(255, 255, 255, .8) 50%, rgba(155, 155, 155, .4) 100%) 1;
+       }
+       main ul li:nth-child(odd):hover {
+        background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 250px 30px;
+        
+       }
+       main ul li:nth-child(even):hover{
+         background-image: url(https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/ico-main-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 250px 500px;
+       }
+      main ul li a >h3 {
+        display: block;
+        color: #000;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: "Pretendard";
+        margin-bottom: 10px;
+      }
+      main ul li a >span{
+        font-family: "Pretendard";
+        color: #7e7e7e;
+      }
+      main ul li p>img{
+        width: 249px;
+        height: 362px;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 100px;
+      }
+       main ul li:nth-child(even) p>img{
+        margin: 0 0 100px;
+       }
+      footer{
+        text-align: center;
+        font-size: 15px;
+        font-family: "Pretendard";
+        color: #6e6e6e;
+        padding: 1vw 2vw 1.6vw;
+      }
+      @media screen and (max-width:1024px) {
+        main ul{
+          flex-wrap: wrap;
+        }
+        main ul li:nth-child(odd):hover {
+        background-repeat: no-repeat;
+        background-position: 230px 30px;
+        background-size: 20px;
+        
+       }
+         main ul li:nth-child(even):hover {
+        background-repeat: no-repeat;
+        background-position: 230px 500px;
+        background-size: 20px;
+        
+       }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="logo">
+          <a href="#"
+            ><h1>국립고궁박물관</h1>
+            <span>o n l i n e m u s e u m</span>
+          </a>
+        </li>
+        <li class="nav_btn">
+          <span></span>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <a href="#"><h3>상설전시</h3>
+            <span>Permanent Exhibition</span>
+        <p><img src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=c34a683dacb040c79c4fd6a44f6cb140&fileSn=1" alt=""></p></a>
+        </li>
+        <li>
+          <a href="#"><p><img src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=70cff0eaba664585877fcd67cc6f63fd&fileSn=1" alt=""></p><h3>특별전시</h3>
+            <span>Special Exhibition</span>
+          </h3>
+        </a>
+        </li>
+        <li>
+          <a href="#"><h3>멀티미디어북</h3>
+            <span>Multimedia Book</span>
+          </h3>
+        <p><img src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=211b47eead9a4e2fa0fe1b7260f2a139&fileSn=1" alt=""></p></a>
+        </li>
+        <li>
+          <a href="#"><p><img src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=36dab1421b68485590a7dc4c1ce549dc&fileSn=1" alt=""></p><h3>소장품 100선</h3>
+            <span>100 Hightlights</span>
+          </h3>
+        </a>
+        </li>
+        <li>
+          <a href="#"><h3>조선왕실, 어보</h3>
+            <span>Royal Seals of the Joseon Dynasty</span>
+          </h3>
+        <p><img src=	"https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=4c9555d62e3343bb89ae0c91f44dd249&fileSn=1" alt=""></p></a>
+        </li>
+        <li>
+          <a href="#"><p><img src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=8ca5c26a41de4a3a87f84d8b6f9015b9&fileSn=1" alt=""></p><h3>게임</h3>
+            <span>Interactive Game</span>
+          </h3>
+        </a>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p class="copy">©2025 National Palace Museum of Korea.</p>
+    </footer>
+  </body>
+</html>
