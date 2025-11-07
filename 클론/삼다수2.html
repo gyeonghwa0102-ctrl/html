@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <style>
-      /*메뉴색변환, 병 사라짐, 스크롤기능, 메뉴창*/
+      /*메뉴색변환, 스크롤기능, 메뉴창, 스크롤 업*/
       @font-face {
         font-family: "NotoSansKR";
         src: url(../webfont/NotoSansKR-VariableFont_wght.woff)
@@ -132,6 +132,11 @@
         left: 48%;
         top: 30%;
         transform: translate(-50px, -50px);
+        opacity: 1;
+        transition: 0.5s;
+      }
+      p.water.on {
+        opacity: 0;
       }
       p.water img {
         width: 213px;
@@ -234,6 +239,26 @@
       .gototop > p > img {
         width: 100%;
         object-fit: cover;
+      }
+      .gototop .ani {
+        position: absolute;
+        width: 100%;
+        animation-name: down;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes down {
+        0% {
+          top: 100%;
+        }
+        50% {
+          top: 50%;
+        }
+
+        100% {
+          top: 100%;
+        }
       }
     </style>
   </head>
@@ -390,22 +415,35 @@
             src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/foot_logo.png"
             alt=""
           />
-        </p><div class="gototop">
-        <p>
+        </p>
+        <div class="gototop">
+          <p>
+            <img
+              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/scroll.png"
+              alt=""
+            />
+          </p>
+          <div class="ani"></div>
+        </div>
+        <p class="water">
           <img
-            src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/scroll.png"
+            src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
             alt=""
           />
         </p>
-      </div>
-      <p class="water">
-        <img
-          src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/new_samdasoo.png"
-          alt=""
-        />
-      </p>
-    </div>
       </footer>
-      
+    </div>
+
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht >= 2800) {
+          document.querySelector(".water").classList.add("on");
+        } else {
+          document.querySelector(".water").classList.remove("on");
+        }
+      };
+    </script>
   </body>
 </html>

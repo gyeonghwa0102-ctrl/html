@@ -28,7 +28,7 @@
         position: relative;
         position: sticky;
         top: 0;
-        z-index: 1;
+        z-index: 999;
       }
       .menu{
         position: static;
@@ -157,7 +157,7 @@
         background-position: center;
         background-size: cover;
       }
-
+      
       .con .item .swiper-slide img {
         display: block;
         width: 100%;
@@ -193,22 +193,27 @@
         font-size: 1.2rem;
         text-transform: uppercase;
       }
-      .con .item:nth-child(1) .txt {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        text-wrap: nowrap;
+      .con .item .visual{
+        position: relative;
       }
-      .con .item:nth-child(1) .txt h1 {
+      .con .item:nth-child(1) .visual .txt>div {
+        position: absolute;
+        left: 150px;
+        top: 100px;
+        /* transform: translate(-50%, -50%); */
+        text-wrap: nowrap;
+        z-index: 1;
+      }
+      .con .item:nth-child(1) .txt >div h1 {
         text-align: center;
         font-size: 54px;
       }
-      .con .item:nth-child(1) .txt p {
+      .con .item:nth-child(1) .txt >div p {
         font-weight: bold;
         font-size: 106px;
         text-transform: none;
       }
+
       .con .item:nth-child(5) .txt,
       .con .item:nth-child(12) .txt {
         font-size: 146px;
@@ -420,13 +425,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
       }
       .foot .site .copyr{
         font-size: 16px;
         color: rgba(0, 0, 0, 0.3);
+        
       }
       .foot .sns{
-        display: flex;gap: 30px;
+        display: flex;
+        gap: 30px;
+        cursor: pointer;
       }
       .foot .sns img{
         width: 68px;
@@ -525,36 +534,41 @@
     </div>
     <div class="con">
       <div class="item">
-        <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img
-            src="https://www.spc.co.kr/files/banner/2024/07/e7d387f2-4281-4f1d-a789-b9a1a5cd38c3.webp"
-          />
+        <div class="visual">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <img
+              src="https://www.spc.co.kr/files/banner/2024/07/e7d387f2-4281-4f1d-a789-b9a1a5cd38c3.webp"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.spc.co.kr/files/banner/2024/07/387a5d7a-85b6-4f25-a1b6-1872a9e32cbc.webp"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.spc.co.kr/files/banner/2024/07/139ff3d8-2021-485a-bb9a-cbda0065a6c8.webp"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://www.spc.co.kr/files/banner/2024/07/acaeb8ad-c255-4b81-afe8-9ba5683912c6.webp"
+            />
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.spc.co.kr/files/banner/2024/07/387a5d7a-85b6-4f25-a1b6-1872a9e32cbc.webp"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.spc.co.kr/files/banner/2024/07/139ff3d8-2021-485a-bb9a-cbda0065a6c8.webp"
-          />
-        </div>
-        <div class="swiper-slide">
-          <img
-            src="https://www.spc.co.kr/files/banner/2024/07/acaeb8ad-c255-4b81-afe8-9ba5683912c6.webp"
-          />
-        </div>
-      </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
         <div class="txt">
-          <h1>일상을 맛있게 행복하게</h1>
-          <p>Happiness in every bite</p>
-        </div>
+          <div>
+            <h1>일상을 맛있게 행복하게</h1>
+            <p>Happiness in every bite</p>
+          </div>
+          </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+         </div>
       </div>
       <div class="item">
         <img src="https://spc.co.kr/img/front/main/history.webp" alt="" />
