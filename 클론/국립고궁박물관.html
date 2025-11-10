@@ -100,6 +100,7 @@ background: #0e0e0e;
         gap: 0.7vw;
         padding: 2vw;
         margin: 50px 0;
+        box-sizing: border-box;
         
       }
       main ul li{
@@ -161,8 +162,25 @@ background: #0e0e0e;
         padding: 1vw 2vw 1.6vw;
       }
       @media screen and (max-width:1024px) {
+        header ul .logo > a > h1{
+          font-size: 22px;
+        }
+        header ul .logo a > span{
+          font-size: 10px;
+        }
+       
         main ul{
           flex-wrap: wrap;
+          gap: 15px;
+        } 
+        main ul li:before{
+          border: 3px solid transparent;
+          border-image:  linear-gradient(135deg, rgba(255, 254, 248, .8) 0%, rgba(155, 155, 155, .4) 20%, rgba(255, 255, 255, .8) 50%, rgba(155, 155, 155, .4) 100%) 1;
+
+        }
+        main ul li{
+          padding: 20px;
+          box-sizing: border-box;
         }
         main ul li:nth-child(odd):hover {
         background-repeat: no-repeat;
