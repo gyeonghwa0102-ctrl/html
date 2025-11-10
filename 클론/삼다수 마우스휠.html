@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .wrap {
+        width: 100vw;
+      }
+      .top {
+        width: 1500px;
+        height: 90px;
+        margin: 0 206px;
+        padding-top: 50px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .top .left img {
+        width: 200px;
+      }
+      .top .right {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+      .top .right > p > a {
+        text-transform: uppercase;
+        font-family: "NotoSansKR";
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .top .right > p:nth-child(1) > a:hover {
+        text-decoration-line: underline;
+      }
+      .top .right p > a img {
+        width: 30px;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* background: #444; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-slide {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .swiper-slide .main1,
+      .swiper-slide .main2,
+      .swiper-slide .main3 {
+        padding: 150px 90px;
+        background-size: cover;
+      }
+      .swiper-slide .main1 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+      }
+      .swiper-slide .main2 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
+      }
+      .swiper-slide .main3 {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+      }
+      .swiper-slide .main1 div,
+      .swiper-slide .main2 div,
+      .swiper-slide .main3 div {
+        font-family: "NotoSansKR";
+        padding: 0px 0 80px 0;
+      }
+      .swiper-slide .main1 div h3 {
+        font-size: 30px;
+        color: #0066ff;
+      }
+      .swiper-slide .main1 div p {
+        font-size: 18px;
+        color: #777;
+      }
+      .swiper-slide .main2 div h3,
+      .swiper-slide .main3 div h3 {
+        font-size: 30px;
+        color: #fff;
+      }
+      .swiper-slide .main2 div p,
+      .swiper-slide .main3 div p {
+        font-size: 18px;
+        color: #fff;
+      }
+      .swiper-slide .main1 p:last-child img,
+      .swiper-slide .main2 p.con2 img,
+      .swiper-slide .main3 p.con2 img {
+        position: relative;
+        z-index: 1;
+      }
+      .swiper-slide .main2 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg2.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 100px auto;
+      }
+      .swiper-slide .main2 .btn a,
+      .swiper-slide .main3 .btn a {
+        font-family: "NotoSansKR";
+        font-size: 17px;
+        color: #fff;
+        line-height: 53px;
+      }
+      .swiper-slide .main3 .btn {
+        background-image: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/btn_bg3.png);
+        background-repeat: no-repeat;
+        width: 166px;
+        height: 53px;
+        margin: 50px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="top">
+      <p class="left">
+        <a href="#"
+          ><img
+            src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/logo.png"
+            alt=""
+        /></a>
+      </p>
+      <div class="right">
+        <p><a href="#">kor ∨</a></p>
+        <p>
+          <a href="#"
+            ><img
+              src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/menu_b.png"
+              alt=""
+          /></a>
+        </p>
+      </div>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="main1">
+            <div>
+              <h3>THE WATER</h3>
+              <p>깨끗하고, 건강하고, 맛있는 물</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/BETTER.png"
+                  alt=""
+                />
+              </p>
+              <p>
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/CHOICE.png"
+                  alt=""
+                />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="main2">
+            <div>
+              <h3>ONLY ONE</h3>
+              <p>진정한 제주다움 실현</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="	https://www.jpdc.co.kr/pub/site/samdasoo/new_images/JEJU.png"
+                  alt=""
+                />
+              </p>
+              <p class="con2">
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/SAMDASOO_T.png"
+                  alt=""
+                />
+              </p>
+              <div class="btn"><a href="#">MORE +</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="main3">
+            <div>
+              <h3>SUSTAINABLE</h3>
+              <p>제주의 청정 자연과 공존하는 제주삼다수</p>
+            </div>
+            <div>
+              <p>
+                <img
+                  src="		https://www.jpdc.co.kr/pub/site/samdasoo/new_images/ECO.png"
+                  alt=""
+                />
+              </p>
+              <p class="con2">
+                <img
+                  src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/FRIENDLY.png"
+                  alt=""
+                />
+              </p>
+              <div class="btn"><a href="#">MORE +</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg4.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>
