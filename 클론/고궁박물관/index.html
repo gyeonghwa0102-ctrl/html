@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="menu" id="menu" />
+      <div id="fullmenu">
+        <ul>
+          <li>
+            <a href="#"
+              ><h3>상설전시</h3>
+              <span>Permanent Exhibition</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><h3>특별전시</h3>
+              <span>Special Exhibition</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><h3>멀티미디어북</h3>
+              <span>Multimedia Book</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><h3>조선왕실, 어보</h3>
+              <span>Royal Seals of the Joseon Dynasty</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><h3>소장품 100선</h3>
+              <span>100 Hightlights</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><h3>게임</h3>
+              <span>Interactive Game</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul>
+          <li class="logo">
+            <a href="#"
+              ><h1>국립고궁박물관</h1>
+              <span>o n l i n e m u s e u m</span>
+            </a>
+          </li>
+          <li class="nav_btn">
+            <span></span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <ul>
+        <li>
+          <a href="#"
+            ><h3>상설전시</h3>
+            <span>Permanent Exhibition</span>
+            <p>
+              <img
+                src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=c34a683dacb040c79c4fd6a44f6cb140&fileSn=1"
+                alt=""
+              /></p
+          ></a>
+        </li>
+        <li id="second">
+          <a href="#">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/main_vr_img_1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/main_vr_img_2.png"
+                    alt=""
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://online.gogung.go.kr/html/onlinemuseum/resources/images/main/main_vr_img_3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <p></p>
+            <a href="#">
+              <h3>특별전시</h3>
+              <span>Special Exhibition</span>
+            </a>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><h3>멀티미디어북</h3>
+            <span>Multimedia Book</span>
+
+            <p>
+              <img
+                src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=211b47eead9a4e2fa0fe1b7260f2a139&fileSn=1"
+                alt=""
+              /></p
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>
+              <img
+                src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=36dab1421b68485590a7dc4c1ce549dc&fileSn=1"
+                alt=""
+              />
+            </p>
+            <h3>소장품 100선</h3>
+            <span>100 Hightlights</span>
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><h3>조선왕실, 어보</h3>
+            <span>Royal Seals of the Joseon Dynasty</span>
+            <p>
+              <img
+                src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=4c9555d62e3343bb89ae0c91f44dd249&fileSn=1"
+                alt=""
+              /></p
+          ></a>
+        </li>
+        <li>
+          <a href="#"
+            ><p>
+              <img
+                src="https://online.gogung.go.kr/cmmn/file/imageSrc.do?atchFileId=8ca5c26a41de4a3a87f84d8b6f9015b9&fileSn=1"
+                alt=""
+              />
+            </p>
+            <h3>게임</h3>
+            <span>Interactive Game</span>
+          </a>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <p class="copy">©2025 National Palace Museum of Korea.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

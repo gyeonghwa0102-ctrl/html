@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        background-color: #333;
+      }
+      input {
+        display: none;
+      }
+      #fullmenu {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 500px;
+        height: 100%;
+        background: #fff;
+        z-index: 2;
+      }
+      #fullmenu ul {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+      }
+      #fullmenu ul li {
+        margin: 25px 0;
+      }
+      #fullmenu ul li a {
+        font-family: "Pretendard";
+        font-size: 27px;
+      }
+      section {
+        height: 100vh;
+      }
+      section.visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      section.visual nav {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 1720px;
+        width: 100%;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+      }
+      section.visual nav .logo {
+        width: 150px;
+      }
+      section.visual nav .logo img {
+        width: 100%;
+        filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(143deg)
+          brightness(107%) contrast(100%);
+      }
+      section.visual nav .right {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      section.visual nav .right .mall {
+        height: 28px;
+        line-height: 28px;
+        padding: 0 20px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+      }
+      section.visual nav .right .mall a {
+        font-family: "Pretendard";
+        color: #fff;
+      }
+      section.visual nav .right .mall img {
+        width: 20px;
+        height: 20px;
+        filter: invert();
+        vertical-align: middle;
+      }
+      section.visual nav .right .lang a {
+        font-family: "Pretendard";
+        color: #fff;
+        display: block;
+        border-bottom: 1px solid #fff;
+        padding: 5px;
+      }
+      section.visual nav .right .hambuger {
+        position: relative;
+        z-index: 3;
+      }
+      section.visual nav .right .hambuger label {
+        cursor: pointer;
+      }
+      section.visual nav .right .hambuger label span {
+        display: block;
+        width: 35px;
+        height: 2px;
+        background: #fff;
+        margin: 9px 0;
+        transition: 0.5s;
+      }
+      section.visual .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #menu:checked ~ section.visual nav .right .hambuger label span.bar1 {
+        transform: translate(0, 11px) rotate(45deg);
+        background: #000;
+      }
+      #menu:checked ~ section.visual nav .right .hambuger label span.bar2 {
+        opacity: 0;
+      }
+      #menu:checked ~ section.visual nav .right .hambuger label span.bar3 {
+        transform: translate(0, -11px) rotate(-45deg);
+        background: #000;
+      }
+      #menu:checked ~ #fullmenu {
+        right: 0;
+      }
+      #menu:checked ~ section.visual::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: calc(100% - 500px);
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        z-index: 999;
+      }
+      #mall_btn {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+        cursor: pointer;
+        z-index: 1;
+      }
+      #mall_btn ul {
+        border-radius: 50px 50px;
+        background: #173d81;
+        height: 85px;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      #mall_btn ul li {
+        width: 85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Pretendard";
+        font-size: 11px;
+        color: #fff;
+        padding-top: 25px;
+      }
+      #mall_btn ul li img {
+        width: 32px;
+        height: 32px;
+        padding-bottom: 5px;
+      }
+      #mall_btn ul li:nth-child(3) img,
+      #mall_btn ul li:nth-child(4) img {
+        filter: invert();
+      }
+      #mall_btn:hover ul {
+        height: 240px;
+      }
+      #mall_btn:hover ul li:first-child {
+        display: none;
+      }
+      section.visual .swiper-slide img {
+        filter: brightness(0.8);
+      }
+      section.visual .swiper-slide .txt {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+        font-family: "Pretendard";
+      }
+      section.visual .swiper-slide .txt img {
+        margin-bottom: 41px;
+        width: 350px;
+        object-fit: cover;
+        filter: brightness(0) invert(1);
+      }
+      section.visual .swiper-slide .txt h1 {
+        font-size: 2.2em;
+        font-weight: 200;
+        margin-top: 50px;
+        color: #fff;
+      }
+
+      section.visual .swiper-slide:nth-child(2) .txt h1 {
+        margin-top: 0;
+      }
+      section.visual .swiper-slide:nth-child(3) .txt h1 {
+        margin-top: 5px;
+      }
+      section.visual .swiper-slide:nth-child(3) .txt img {
+        margin-top: 20px;
+      }
+      section.visual .swiper-slide:nth-child(4) .txt img {
+        width: 200px;
+      }
+      section.visual .swiper-slide:nth-child(4) .txt h1 {
+        margin-top: 3px;
+      }
+      section.visual .swiper-slide:nth-child(5) .txt img {
+        width: 260px;
+        margin-bottom: 0;
+      }
+      .swiper-horizontal > .swiper-pagination-bullets,
+      .swiper-pagination-bullets.swiper-pagination-horizontal,
+      .swiper-pagination-custom,
+      .swiper-pagination-fraction {
+        bottom: 15%;
+        left: -43%;
+        width: 100%;
+      }
+      .swiper-pagination-bullet {
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        opacity: 1;
+        font-family: "Pretendard";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <input type="checkbox" name="menu" id="menu" />
+      <div id="fullmenu">
+        <ul>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">INNOVATION</a></li>
+          <li><a href="#">BRANDS</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+          <li><a href="#">ESG</a></li>
+          <li><a href="#">CAREER</a></li>
+        </ul>
+      </div>
+      <section class="visual">
+        <nav>
+          <p class="logo">
+            <a href="#"
+              ><img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo.svg"
+                alt="logo"
+            /></a>
+          </p>
+          <div class="right">
+            <p class="mall">
+              <a href="#">
+                <span
+                  ><img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/ico_topmall_cart_bk.svg"
+                    alt="cart" /></span
+                >글라스몰
+              </a>
+            </p>
+            <p class="lang"><a href="#">한국어</a></p>
+            <p class="hambuger">
+              <label for="menu">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+              </label>
+            </p>
+          </div>
+        </nav>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/main/vis1-1.jpg"
+                alt=""
+              />
+              <div class="txt">
+                <p>
+                  <img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/brands/logo_glasslock.svg"
+                    alt=""
+                  />
+                </p>
+                <h1>갓 만든 요리의 신선함 그대로</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/main/vis2.jpg"
+                alt=""
+              />
+              <div class="txt">
+                <p>
+                  <img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/brands/logo_glasslockbaby.svg"
+                    alt=""
+                  />
+                </p>
+                <h1>우리아이의 첫 이유식기 시작</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/main/vis3.jpg"
+                alt=""
+              />
+              <div class="txt">
+                <p>
+                  <img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/brands/logo_glasslockcheftopf.svg"
+                    alt=""
+                  />
+                </p>
+                <h1>요리하는 즐거움의 시작</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/main/vis4.jpg"
+                alt=""
+              />
+              <div class="txt">
+                <p>
+                  <img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/brands/logo_boena.svg"
+                    alt=""
+                  />
+                </p>
+                <h1>빛나는 날엔, 보에나</h1>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/main/vis5.jpg"
+                alt=""
+              />
+              <div class="txt">
+                <p>
+                  <img
+                    src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/brands/logo_opet.svg"
+                    alt=""
+                  />
+                </p>
+                <h1>건강하게 오래오래</h1>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div id="mall_btn">
+          <ul>
+            <li>
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/glasslock_cart_w.svg"
+                alt="cart"
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/glasslock_cart_w.svg"
+                alt="cart"
+              /><span>글라스몰</span>
+            </li>
+
+            <li>
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/n_shopping_icon.svg"
+                alt="cart"
+              /><span>네이버스토어</span>
+            </li>
+            <li>
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/globe.svg"
+                alt="cart"
+              /><span>ESG</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
