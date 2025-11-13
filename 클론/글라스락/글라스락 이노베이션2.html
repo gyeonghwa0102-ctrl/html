@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .swiper-slide {
+        padding: 0 100px;
+        box-sizing: border-box;
+        width: 288px;
+        height: 104px;
+      }
+      .swiper-slide img {
+        height: 100px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_01.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_02.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_03.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_04.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_05.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_05.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_02.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_01.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_03.png"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_04.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

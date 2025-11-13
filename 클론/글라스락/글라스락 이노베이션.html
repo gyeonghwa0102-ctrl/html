@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="이노베이션.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <input type="checkbox" name="menu" id="menu" />
@@ -144,15 +148,81 @@
           소비자의 선택 뿐 아니라 전문 기관을 통해서도 그 가치를 인정 받고
           있습니다.
         </p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_01.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_02.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_03.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_04.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/award_05.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_05.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_02.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_01.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_03.png"
+                alt=""
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/sub/innovation/certi_04.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <footer>
       <div class="left">
         <p class="logo">
-          <img
-            src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo_sgc.svg"
-            alt=""
-          />
+          <a href="#">
+            <img
+              src="https://www.glasslock.co.kr/pages/layout/_glasslock/images/common/logo_sgc.svg"
+              alt=""
+            />
+          </a>
         </p>
         <ul>
           <li><span>SGC솔루션㈜</span> 서울특별시 서초구 양재대로 246</li>
@@ -189,10 +259,41 @@
               alt=""
             />
           </li>
-          <li>Family Site</li>
+          <li>
+            <a href="">Family Site <span>+</span></a>
+          </li>
         </ul>
         <p>COPYRIGHTS ⓒ 2024 SGC SOLUTIONS CO.,LTD. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        freeMode: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        console.log(ht);
+        if (ht >= 5095) {
+          document.querySelector("#mall_btn").classList.add("on");
+        } else {
+          document.querySelector("#mall_btn").classList.remove("on");
+        }
+      };
+    </script>
   </body>
 </html>

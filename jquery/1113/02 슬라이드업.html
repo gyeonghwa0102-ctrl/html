@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>러쉬</title>
+    <style>
+      div {
+        height: 500px;
+      }
+      p {
+        height: 100%;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>제이쿼리</p>
+    </div>
+    <button id="slideDown">slideDown</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideToggle">slideToggle</button>
+    <script>
+      $("#slideDown").click(function () {
+        $("p").slideDown(1000);
+      });
+      $("#slideUp").click(function () {
+        $("p").slideUp(1000);
+      });
+      $("#slideToggle").click(function () {
+        $("p").slideToggle(1000);
+      });
+    </script>
+  </body>
+</html>
