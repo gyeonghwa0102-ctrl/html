@@ -1,0 +1,28 @@
+$main: #f00;
+$size: 20px;
+@mixin txt {
+  background-color: #ccc;
+  border: 1px solid;
+  padding: 20px;
+}
+@mixin text($bg, $height, $margin) {
+  background-color: $bg;
+  line-height: $height;
+  margin: $margin;
+}
+ul {
+  @include txt;
+  @include text(#ccc, 1.5, 100px);
+  list-style: none;
+  li {
+    display: inline-block;
+    a {
+      text-decoration: none;
+      color: $main;
+      font-size: $size;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
