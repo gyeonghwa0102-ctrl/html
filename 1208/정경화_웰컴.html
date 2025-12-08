@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: "Pretendard";
+      }
+      .title > ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title > ul > li {
+        font-size: 18px;
+        width: 300px;
+        height: 80px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .center-underline {
+        position: relative;
+        display: inline-block;
+      }
+      .center-underline::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 3px;
+        background-color: #000;
+        transform: translateX(-50%);
+        transition: width 0.3s ease;
+      }
+      .center-underline:hover::after {
+        width: 100%;
+      }
+      .center-underline a.on {
+        color: #ea002c;
+      }
+      .center-underline.on {
+        color: #ea002c;
+      }
+      .center-underline.on::after {
+        width: 100%;
+        background-color: #ea002c;
+      }
+      .con {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 140px;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+      }
+      .con #box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        display: none;
+      }
+      .con #box.on {
+        display: block;
+      }
+      .con h1 {
+        font-size: 50px;
+      }
+      .con ul {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      .con ul li {
+        margin-top: 50px;
+      }
+      .con ul li:first-child a {
+        color: #ea002c;
+      }
+      .con ul li a {
+        font-size: 20px;
+        color: #666;
+      }
+      .con ul li:nth-child(2):before {
+        content: "·";
+        padding: 0 15px;
+        color: #666;
+      }
+      .con .children ul li:nth-child(2)::after {
+        content: "·";
+        padding: 0 15px;
+        box-sizing: border-box;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <ul>
+        <li class="center-underline" id="one"><a href="#">아동복지사업</a></li>
+        <li class="center-underline" id="two">
+          <a href="#">청소년복지사업</a>
+        </li>
+        <li class="center-underline" id="tri"><a href="#">노인복지사업</a></li>
+        <li class="center-underline" id="for">
+          <a href="#">장애인복지사업</a>
+        </li>
+        <li class="center-underline" id="fiv"><a href="#">사회봉사사업</a></li>
+      </ul>
+      <hr />
+    </div>
+    <div class="con">
+      <div class="children" id="box">
+        <h1>아동복지사업</h1>
+        <ul>
+          <li><a href="#">지역아동센터사업</a></li>
+          <li><a href="#">우리동네키움센터사업</a></li>
+          <li><a href="#">어린이집사업</a></li>
+        </ul>
+      </div>
+      <div class="teen" id="box">
+        <h1>청소년복지사업</h1>
+        <ul>
+          <li><a href="#">청소년복지시설사업</a></li>
+          <li><a href="#">웰컴투모로우사업</a></li>
+        </ul>
+      </div>
+      <div class="aged" id="box">
+        <h1>노인복지사업</h1>
+        <ul>
+          <li><a href="#">행복빨래사업</a></li>
+          <li><a href="#">주거환경개선사업</a></li>
+        </ul>
+      </div>
+      <div class="handicap" id="box">
+        <h1>장애인복지사업</h1>
+      </div>
+      <div class="social" id="box">
+        <h1>사회봉사사업</h1>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".center-underline").eq(0).trigger("click");
+      });
+      $(".center-underline").click(function (e) {
+        e.preventDefault();
+        $(".center-underline a").removeClass("on");
+        $(this).children("a").addClass("on");
+
+        $(".center-underline").removeClass("on");
+        $(this).addClass("on");
+
+        let idx = $(this).index();
+        $(".con #box").removeClass("on");
+        $(".con #box").eq(idx).addClass("on");
+      });
+    </script>
+  </body>
+</html>
