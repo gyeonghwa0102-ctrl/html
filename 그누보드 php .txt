@@ -1,0 +1,51 @@
+autoset 
+id: root
+passwprd: autoset
+웹서버 시작/ my sql 시작
+
+그누보드 설치 압축풀고  data 폴더 만들기 
+autoset10>public html 안에 그누보드 파일 넣음
+
+제어> pnpmyadmin 접속 > 데이터 베이스> gnuboard5 파일 만들기
+
+
+주소/gnuboard5
+user: root
+password: autoset
+db: gnuboard5
+
+상단코드/ 하단코드 분리
+메인콘텐츠 파일에는
+<? include "subhead.php" ?>
+<div id=content></div>
+<? include "subtail.php" ?>
+코드 작성
+
+자유게시판 수정
+상단파일 경로 ../../subhead.php
+하단파일 경로 ../../subtail.php
+
+그누보드5>테마>베이직>헤드, 서브 pnp에 각각 sub 코드 넣기
+
+로그인
+mylogin.php 파일 생성> 코드작성
+<? include "subhead.php" ?>
+   <div id="mylogin">
+    <? echo outlogin(); ?> //echo 눈에 나타나게 하는 코드
+   </div>
+<? include "subtail.php" ?>
+
+subhead.php 파일에 원래 css코드 넣음
+
+회원가입
+
+로그인> 회원가입 완료 > 메인으로 
+메인 경로 바꿈
+그누보드5>테마>베이직>스킨>멤버>베이직>레지스터 리설트 스킨.pnp 파일 마지막 코드 링크 '/'로 변경
+
+로그아웃시 페이지 메인으로 경로변경
+그누보드5>비비에스>로그아웃.php 파일 마지막코드 링크 '/'
+
+로그인시 페이지 메인으로 경로변경
+그누보드5>비비에스>로그인 쳌.php 파일 마지막코드 링크 '/'
+

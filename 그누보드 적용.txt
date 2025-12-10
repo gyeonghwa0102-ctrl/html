@@ -1,0 +1,41 @@
+파일질라 그누보드 적용법
+
+gnuboard 다운받기 > 파일안에 data폴더 만들기
+
+html > gnuboard5/ 파일 넣기
+
+파일질라에서 gnuboard5파일 data 오른쪽 마우스 클릭 > 비밀번호 707 누르고 확인
+
+내 닷홈페이지 들어가서
+주소/gunboard5 넣고 엔터
+
+다운로드 > 아이디, 비밀번호, 호스팅아이디 작성
+
+*로그인 화면
+그누보드 화면 로그인 버튼 클릭> 도메인 복사
+클릭시 로그인화면 뜨고 싶은 곳에
+https://gyeonghwa.dothome.co.kr/gnuboard5/bbs/login.php
+붙여넣기
+
+*게시판 화면
+새로운 페이지 free.html 만들기
+게시판 a태그에 free주소 넣기
+그누보드 홈페이지 자유게시판 클릭 도메인 복사
+
+ifreme 태그안에 게시판 주소 붙여넣기
+id="iframe"
+            style="width: 100%"
+            onload="Height();"
+            frameborder="0"
+            scrolling="no"
+            src="https://gyeonghwa.dothome.co.kr/gnuboard5/bbs/board.php?bo_table=free"
+            frameborder="0"
+
+스크립트에 아래 태그 넣으면 크기조정가능
+function Height() {
+        let the_height =
+          document.getElementById("iframe").contentWindow.document.body
+            .scrollHeight;
+        document.getElementById("iframe").height = the_height + 50;
+        document.getElementById("iframe").style.overflow = "hidden";
+      }
